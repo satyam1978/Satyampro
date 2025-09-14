@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Css bootstrap 5-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script><!--Js Bootstrap 5-->
+
+    <link rel="stylesheet" href="style.css"> <!--Css external link-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--Css animation cdn-->
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> <!--3-D-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+    <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"></script>
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <dotlottie-wc src="https://lottie.host/34e84557-9a9a-4838-917e-1b0562adbc12/wlwT93Ti1R.lottie"
+            style="width: 300px; height: 300px" speed="1" autoplay>
+        </dotlottie-wc>
+    </div>
+
+
+    <!-- Lottie background -->
+    <canvas id="lottie-bg"></canvas>
+
+    <div id="page-content">
+
+        <div class="mobile_nav">
+            <div class="container-fluid fixed-top mx-0 px-0">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light   ">
+                    <div class="container-fluid ">
+                        <div class="row logo">
+                            <div class="col-12">
+                                <a href="" class="nav-link p-0">
+                                    <h3 class=" border bg-primary py-1 px-2 ms-2 me-2  mb-0 rounded-pill text-white ">
+                                        Satyam
+                                    </h3>
+                                </a>
+                            </div>
+                        </div>
+                        <form class="d-flex lct">
+                            <a href="hire.html"
+                                class=" rounded-pill btn-outline btn px-3 let animate__animated animate__pulse animate__infinite">Let's
+                                Hire <span class=" fs-6">&#8594;</span></a>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+            <div class="container-fluid fixed-bottom mx-0 px-0 ">
+                <nav class="navbar  navbar-light bg-light mobnav   ">
+                    <ul class=" mob_nav">
+                        <li><a href="index.html" class="mbnv text-primary active home"><i
+                                    class="fa-solid fa-house"></i></a>
+                        </li>
+                        <li><a href="service.html" class="mbnv"><i class="fa-solid fa-briefcase"></i></a></li>
+                        <li><a href="project.html" class="mbnv"><i class="fa-solid fa-diagram-project"></i></a></li>
+                        <li><a href="contact.html" class="mbnv pe-1"><i
+                                    class="fa-solid fa-user-tie hover-primary "></i></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+        <header class="container-fluid sec  bo1">
+
+            <div class="lg_nav">
+                <div class="container mt-4 fixed-top  ">
+                    <nav class="navbar   navbar-expand-lg navbar-light bg-light  rounded-pill navi p-1">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="index.html" class="nav-link p-0">
+                                    <h3 class=" border bg-primary py-1 px-2 ms-2 me-2  mb-0 rounded-pill text-white ">
+                                        Satyam
+                                    </h3>
+                                </a>
+                            </div>
+                        </div>
+
+                        <ul class="navbar-nav me-auto mb-0 mb-lg-0 text-center">
+                            <li class="nav-item">
+                                <a class="nav-link active text-primary" aria-current="page" href="index.html"><i
+                                        class="fa-solid fa-house"></i></a>
+                            </li>
+                            <li><a href="#about " class=" nav-link abt">About</i></a></li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle srv">Services</a>
+                                <ul class="dropdown-menu drpp">
+                                    <li><a href="webprojects.html" class="dropdown-item">Wev Development</a></li>
+                                    <li><a href="ux.html" class="dropdown-item">UI/UX Design</a></li>
+                                    <li><a href="gd.html" class="dropdown-item">Graphic Design</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="project.html " class=" nav-link pjt">Project</i></a></li>
+                            <li><a href="contact.html " class=" nav-link ctc">Contact Us</i></a>
+
+                        </ul>
+                        <form class="d-flex pe-3">
+                            <a href="#"
+                                class=" rounded-pill btn-outline btn px-3 let animate__animated animate__pulse animate__infinite animate__delay-1s">Let's
+                                Talk <span class=" fs-6">&#8594;</span></a>
+                        </form>
+                    </nav>
+
+                </div>
+            </div>
+
+
+
+            <div class=" hell ">
+                <div class="row int ">
+                    <div class="col-md-6 mt-5">
+                        <div class="row mt-2">
+                            <div class="get p-2">
+                                <h6 class=" p-2 hello animate__animated animate__rollIn animate__delay-1s">Hello!</h6>
+                            </div>
+                            <div class="row ">
+                                <div class="col-10 my-2 ">
+                                    <h4 class=" hello_1 animate__animated animate__fadeInUp animate__delay-1s">I'm <span
+                                            class=" nm ">Satyam
+                                            Tripathi,</span>
+                                        Designer/Developer</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 my-2 text-white justify-content-justify ">
+                                    <p class="ab_p animate__animated animate__fadeInUp animate__delay-1s">I have a
+                                        strong foundation in
+                                        Computer Organization, Computer Networking, Web Development, and
+                                        Technical
+                                        Communication. Along with academics, I am continuously improving my skills in
+                                        software development and AI technologies to build a career as a Software
+                                        Engineer
+                                        and AI Developer.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-7 ">
+                                    <div
+                                        class="but d-flex border rounded-pill wow animate__animated animate__fadeIn animate__delay-1s">
+                                        <a href="index.html"
+                                            class=" rounded-pill btn-outline btn px-2 port mx-1">Portfolio
+                                            <span class=" fs-6">&#8594;</span></a>
+                                        <a href="hire.html"
+                                            class=" rounded-pill btn-outline btn px-2 hire mx-1 ms-auto animate__animated animate__backInUp animate__delay-1s">Hire
+                                            Me!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 one animate__animated animate__fadeInRight animate__delay-1s">
+                        <dotlottie-wc src="https://lottie.host/688d14bd-a2b4-431d-ab02-7c21a8b6cd03/LuINoECfD0.lottie"
+                            autoplay loop class="img animate__animated animate__fadeInUp animate__delay-1s">
+                        </dotlottie-wc>
+
+                        <div class="row p-2">
+                            <div
+                                class="col-12 border-top border-bottom rounded-end two p-4 border-info border-gradient ">
+                                <div class="row p-1">
+                                    <div
+                                        class="col-12 three border-top border-bottom rounded-pill p-5 border-info border-gradient  ">
+                                        <div class="row p-1">
+                                            <div
+                                                class="col-12 four border-start border-end rounded-pill p-4 border-info border-gradient">
+                                                <div class="row p-1">
+                                                    <div
+                                                        class="col-12 four border-start border-end rounded-pill p-4 border-info border-gradient">
+                                                        <div class="row  ">
+                                                            <div
+                                                                class="col-12 four border-start border-end  p-3 border-info border-gradient">
+                                                                <div class="row  ">
+                                                                    <div
+                                                                        class="col-12 four border-start border-end  p-3 border-info border-gradient">
+                                                                        <div class="row ">
+                                                                            <div
+                                                                                class="col-12 four border-start border-end  p-3 border-info border-gradient">
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="about"></div>
+        </header>
+
+        <!-- About Section -->
+        <div class="container-fluid about">
+            <div class="row ">
+                <div class="col-md-6 p-4">
+                    <div class="row  mx-2 mt-4">
+                        <div class="col-md-12  frm  abimg wow animate__animated animate__zoomIn animate__slow">
+                            <span class="sty">
+                                <model-viewer src="digitigrade_droid_concept.glb" alt="A 3D model of an astronaut"
+                                    class="imat robo" auto-rotate camera-controls ar shadow-intensity="3">
+                                </model-viewer>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 a_box ">
+
+                    <div class="row mt-2">
+                        <div class="About mb-2 ">
+                            <h6 class="bt p-2 wow animate__animated animate__jello">About Me!</h6>
+                        </div>
+                        <div class="row">
+                            <div class="col-12  p-2">
+                                <h4 class=" abt text-white wow  animate__animated animate__fadeIn animate__slow ">Get a
+                                    website that will make a lasting impression on
+                                    your audience!!!</4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div
+                                class="col-12 my-2 text-white a_p mb-3 wow animate__animated animate__fadeIn animate__slow ">
+                                <p>We don’t just build websites—we create smart, user-focused digital experiences.
+                                    By understanding your goals and your audience, we design sites that are fast,
+                                    modern, and easy to use.
+                                    Every detail is customized to reflect your brand and deliver real results.</p>
+                            </div>
+                        </div>
+
+                        <div class="row mx-1 mb-4 wow animate__animated animate__zoomIn animate__slow">
+                            <div class="col-md-10 p-2 con rounded bg-dark ">
+                                <div class="row  ">
+                                    <div class="col-md-5  p-2 mx-2 ssct">
+                                        <h6>Name:</h6>
+                                        <p class="text-white">Satyam Tripathi</p>
+                                    </div>
+                                    <div class="col-md-5  p-2 mx-2 ms-auto">
+                                        <h6>Contact:</h6>
+                                        <p class="text-white">+91-9616801911</p>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-md-5 p-2 mx-2 mylk">
+                                        <h6>E-mail:</h6>
+                                        <p class="text-white"><a
+                                                href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"
+                                                target="_blank">satyamtripathipm@gmail.com</a></p>
+                                    </div>
+                                    <div class="col-md-5  p-2 mx-2 ms-auto mylk">
+                                        <h6>LinkedIn:</h6>
+                                        <p class="text-white"><a href="https://linkedin.com/in/satyam-tripathi--"
+                                                target="_blank">satyamtripathi1978</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class=" rebt ">
+                                <div class=" rebut d-flex ">
+                                    <a href="contact.html"
+                                        class=" rounded-pill btn-outline btn px-2 cont mx-1 wow animate__animated animate__fadeIn animate__slow">Contact
+                                        <span class=" fs-6">&#8594;</span></a>
+                                    <a href="Satyam tr.pdf" download="Satyam-Resume"
+                                        class=" rounded-pill btn-outline btn px-2 res  ms-auto wow animate__animated animate__fadeIn animate__slow">Resume
+                                        <i class="fa-solid fa-download"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div class="container-fluid  mt-5">
+            <div class="ser text-center">
+                <h1 class=" mb-3 my text-white wow animate__animated animate__fadeIn animate__slow">My <span
+                        class="s">Services</span></h1>
+                <p
+                    class="mb-5 px-2 text-white justify-content-justify wow animate__animated animate__fadeIn animate__slow ">
+                    We create impactful digital experiences through Web Development, UI/UX, and Graphic Design. Our
+                    websites are fast, responsive, and built to perform, while our UI/UX design ensures every
+                    interaction is smooth and intuitive. With creative graphic design, we add visuals that capture
+                    attention and strengthen your brand identity.<br>
+
+                    ✨ The result? A perfect balance of technology, design, and creativity—tailored to connect with your
+                    audience and grow your business.</p>
+            </div>
+            <div class="row px-4 d-fluid justify-content-center  sr">
+                <div class="col-md-3 mx-3  card border sd wow animate__animated animate__fadeIn animate__slow" id="cad">
+                    <img src="7.PNG" alt="WD" class="card-img-top im ">
+                    <div class="card-body">
+                        <h3 class="card-title">Web Development</h3>
+                        <hr class="text-white">
+                        <p class="card-text text-white">My focus is on creating clean code, smooth functionality, and
+                            optimized performance so that every website works seamlessly across all devices.</p>
+                        <a href="webprojects.html" class="btn see rounded-pill">See More!</a>
+                    </div>
+                </div>
+                <div class="col-md-3 mx-3 card border sd wow animate__animated animate__fadeIn animate__slow" id="cad">
+                    <img src="Nike UI.jpg" alt="UI" class="card-img-top im">
+                    <div class="card-body">
+                        <h3 class="card-title">UI/UX Design</h3>
+                        <hr class="text-white">
+                        <p class="card-text text-white">I design intuitive and engaging user interfaces that put the
+                            user first. Using tools like Figma, I craft layouts and experiences that are simple to
+                            navigate, visually appealing, and focused on improving user interaction and satisfaction.
+                        </p>
+                        <a href="ux.html" class="btn see rounded-pill">See More!</a>
+                    </div>
+                </div>
+                <div class="col-md-3  mx-3 card border sd wow animate__animated animate__fadeIn animate__slow" id="cad">
+                    <img src="your_name-transformed.png" alt="GD" class="card-img-top im ">
+                    <div class="card-body">
+                        <h3 class="card-title">Graphic Design</h3>
+                        <hr class="text-white">
+                        <p class="card-text text-white wow animate__animated animate__fadeIn animate__slow">From logos
+                            and social media graphics to complete design systems, my work blends creativity with
+                            strategy to strengthen brand presence.</p>
+                        <a href="gd.html"
+                            class="btn see rounded-pill wow animate__animated animate__fadeIn animate__slow">See
+                            More!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex my-5 text-center">
+                <div class="col-12 ">
+                    <a href="service.html"
+                        class="btn ex wow animate__animated animate__fadeIn animate__slow ">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Hire -->
+
+        <div class="container-fluid about">
+            <div class="row ">
+                <div class="col-md-6 a_box ">
+                    <div class="row">
+                        <div class="col-12  p-2">
+                            <h1 class=" mb-1 my text-white wow animate__animated animate__fadeIn animate__slow">Why
+                                <span class="s">Hire Me?</span>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div
+                            class="col-12 my-2 text-white a_p mb-3 wow animate__animated animate__fadeIn animate__slow ">
+                            <p>I’m a passionate Web Designer & Developer with proven expertise in WordPress, Shopify,
+                                and
+                                Elementor Pro. I build clean,
+                                responsive, and SEO-optimized websites that not only look great but also drive results.
+                                With
+                                a focus on performance,
+                                creativity, and user experience, I deliver projects on time with 100% client
+                                satisfaction.
+                                Whether you need a brand-new
+                                site or a redesign — I’m here to turn your ideas into reality.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row mx-1 mb-4 wow animate__animated animate__fadeIn animate__slow ">
+                        <div class="col-md-12 con rounded bg-dark why">
+                            <div class="row ">
+                                <div class="col-md-12 p-3 ">
+                                    <div class="skill set">
+                                        <h4>Technologies I Use:</h4>
+                                        <marquee behavior="scroll" direction="left" scrollamount="6">
+                                            <span>HTML</span>
+                                            <span>CSS</span>
+                                            <span>JavaScript</span>
+                                            <span>Jquery</span>
+                                            <span>C</span>
+                                            <span>PHP</span>
+                                            <span>JSX</span>
+                                            <span>React</span>
+                                            <span>Excel</span>
+                                            <span>SQL</span>
+                                            <span>Graphic Design</span>
+                                            <span>UI/UX Design</span>
+                                        </marquee>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row  ">
+                                <div class="col-md-12 ">
+                                    <div class="skill set">
+                                        <h4>Tools I Use:</h4>
+                                        <marquee behavior="scroll" direction="right" scrollamount="6">
+                                            <span>Photoshop</span>
+                                            <span>Illustrator</span>
+                                            <span>Figma</span>
+                                            <span>VS Code</span>
+                                            <span>Git</span>
+                                            <span>Spline</span>
+                                            <span>Black Box</span>
+                                            <span>Perplexity</span>
+                                        </marquee>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class=" rebt ">
+                            <div class=" rebut d-flex ">
+                                <a href="hire.html"
+                                    class=" rounded-pill btn-outline btn px-2 cont mx-1 wow animate__animated animate__fadeIn animate__slow ">Hire
+                                    Me <span class=" fs-6">&#8594;</span></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row  mx-2 pt-3">
+                        <div class="col-md-12  frm p-3 abimg ">
+                            <span class=" ssty">
+                                <img src="WhatsApp Image 2025-08-06 at 10.34.35 PM.jpeg" alt="img" class="imat">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- My Skill -->
+
+        <div class="container-fluid  msk ">
+            <div class="ser text-center">
+                <h1 class=" mb-3 my text-white wow animate__animated animate__fadeIn animate__slow">My <span
+                        class="s">Skills</span></h1>
+                <p
+                    class="mb-5 px-2 text-white justify-content-justify wow animate__animated animate__fadeIn animate__slow">
+                    I specialize in <b>Web Development, UI/UX Design, and Graphic Design</b>, with hands-on experience
+                    in
+                    modern tools and technologies. From crafting clean and responsive websites using <b>HTML, CSS,
+                        JavaScript,
+                        Bootstrap, and SQL</b> to creating intuitive user interfaces with <b>Figma</b> and unique
+                    visuals through
+                    <b>graphic design</b>, I focus on building digital experiences that are both functional and visually
+                    engaging.
+                    My skillset allows me to design, develop, and deliver complete solutions tailored to user needs.
+                </p>
+
+            </div>
+            <div
+                class="row px-4 d-fluid justify-content-center mb-2 sr wow  animate__animated animate__fadeIn animate__slow ">
+                <div class="col-md-5 mx-3  d-flex sd sk  p-2">
+                    <div class="iconfg mt-3 fg">
+                        <img src="figma (1).png" alt="figma" class=" if">
+                    </div>
+                    <div class="iconexe mt-3 exe">
+                        <img src="logo.png" alt="figma" class=" iex">
+                    </div>
+                    <div class="icongd mt-3 gd">
+                        <img src="graphic-designer.png" alt="figma" class=" ig ">
+                    </div>
+                    <div class="iconwp mt-3 wp">
+                        <img src="wordpress.png" alt="figma" class=" iw ">
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="row px-4 d-fluid justify-content-center mb-2 sr wow  animate__animated animate__fadeIn animate__slow ">
+                <div class="col-md-5 mx-3  d-flex sd sk  p-2">
+                    <div class="iconsql mt-3 sql">
+                        <img src="sql.png" alt="figma" class=" iq  ">
+                    </div>
+                    <div class="iconhtml mt-3 html">
+                        <img src="html-5.png" alt="figma" class=" iht ">
+                    </div>
+                    <div class="iconcss mt-3 css">
+                        <img src="css-3.png" alt="figma" class=" ics  ">
+                    </div>
+                    <div class="iconjs mt-3 js">
+                        <img src="js.png" alt="figma" class=" ijs ">
+                    </div>
+                </div>
+            </div>
+            <div
+                class="row px-4 d-fluid justify-content-center  sr wow  animate__animated animate__fadeIn animate__slow  ">
+                <div class="col-md-4 mx-3  d-flex sd sk  p-1">
+                    <div class="iconjq mt-3 bg-white jq">
+                        <img src="social.png " alt="figma" class=" ijq  ">
+                    </div>
+                    <div class="iconbst mt-3 bst">
+                        <img src="bootstrap.png " alt="figma" class=" ibst ">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certificate/Achivement -->
+
+        <div class="container-fluid achiv ">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center mb-4 text-white wow animate__animated animate__fadeIn animate__slow">My<span
+                            class="crt">Achivements</span></h1>
+                    <p class="text-center text-white mb-5 wow animate__animated animate__fadeIn animate__slow ">Here are
+                        some of my
+                        best graphic design works, from brand identity to
+                        social media creatives.</p>
+                </div>
+            </div>
+
+            <div class="row g-4 wow animate__animated animate__fadeIn animate__slow  cr">
+
+                <!-- Certificate 1 -->
+                <div class="col-md-4">
+                    <div class="portfolio-card" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                        <img src="Certificates/Tutedute.jpg" alt="Tutedude" class="portfolio-img">
+                        <div class="portfolio-info">
+                            <h5 class="mb-1">Tutedude Web Development Hackathon</h5>
+                            <small class="text-muted">The hackathon tested both
+                                speed and
+                                precision in designing functional, scalable, and user-friendly web applications.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 2  -->
+                <div class="col-md-4">
+                    <div class="portfolio-card" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                        <img src="Certificates/guvi.png" alt="Social Media" class="portfolio-img">
+                        <div class="portfolio-info">
+                            <h5 class="mb-1">AKTU AI Tech Hackathon 2025</h5>
+                            <small class="text-muted">Smart Study Planner by Team SAGA helps users organize schedules,
+                                track
+                                progress, and boost learning efficiency through a
+                                clean, responsive interface.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 3   -->
+                <div class="col-md-4">
+                    <div class="portfolio-card" data-bs-toggle="modal" data-bs-target="#projectModal3">
+                        <img src="Certificates/Inamigos_page-0001.jpg" alt="In amigos" class="portfolio-img">
+                        <div class="portfolio-info">
+                            <h5 class="mb-1">Graphic Design Internship</h5>
+                            <small class="text-muted">Recognized for being hardworking, result-oriented, and sincere,
+                                contributing effectively to
+                                assigned tasks and creative outputs.</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row  wow animate__animated animate__fadeIn animate__slow">
+                <div class="col-md-1 ct "><button class=" rounded-pill crtc btn "><a
+                            href="certificates.html">More</a></button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- certificate Modals  -->
+
+        <!-- Modal 1  -->
+        <div class="modal fade" id="projectModal1" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content p-3">
+                    <div class="d-flex">
+                        <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <img src="Certificates/Tutedute.jpg" alt="Tutedude" class="modal-img">
+                    <h5 class="mt-3">Tutedude Web Development Hackathon</h5>
+
+                    <p>
+                        Participated in and successfully completed Tutedude’s 48-hour online <strong>Web Development
+                            Hackathon</strong> held
+                        from
+                        <strong>July 25 to July 27, 2025</strong>. This intensive event focused on solving real-world
+                        challenges through
+                        innovative web
+                        solutions, emphasizing creativity, collaboration, and technical problem-solving skills. The
+                        hackathon tested both
+                        speed and
+                        precision in designing functional, scalable, and user-friendly web applications.
+                    </p>
+
+                    <div class="row">
+                        <div class="col-1"><a href="lopemay.html" class="btn btn-outline-danger w-5"> View</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 2  -->
+        <div class="modal fade" id="projectModal2" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content p-3">
+                    <div class="d-flex">
+                        <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <img src="Certificates/guvi.png" alt="GUVI Hackathon" class="modal-img">
+                    <h5 class="mt-3">Smart Study Planner</h5>
+                    <p>
+                        The Smart Study Planner is a productivity-focused web application designed to help students and
+                        professionals efficiently organize their learning schedules. Developed by <strong>Team
+                            SAGA</strong>
+                        —
+                        Satyam Tripathi and Gaurav Kumar Maurya — the platform enables users to create customized study
+                        plans, monitor progress, and stay consistent with reminders and deadlines. Its clean, responsive
+                        interface ensures seamless usability across devices, while key features such as task scheduling,
+                        progress tracking, and adaptive adjustments promote goal-oriented learning. This project
+                        reflects
+                        strong skills in <strong>UI/UX design</strong>, front-end development, and collaborative
+                        problem-solving.
+                    </p>
+                    <p><strong>ID:</strong> 7cn7W61S1948hr1t96</p>
+                    <p><strong>URL:</strong> <a
+                            href="https://www.guvi.in/share-certificate/7cn7W61S1948hr1t96">click</a>
+                    </p>
+                    <div class="row">
+                        <div class="col-1"><a href="study-planner.html" class="btn btn-outline-danger w-5"> View</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- Modal 3  -->
+        <div class="modal fade" id="projectModal3" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content p-3">
+                    <div class="d-flex">
+                        <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <img src="Certificates/Inamigos_page-0001.jpg" alt="Inamigos" class="modal-img">
+                    <h5 class="mt-3">Graphic Designing Internship</h5>
+                    <p>
+                        Successfully completed a two-week <strong>Graphic Designing Internship</strong> at
+                        <strong>Inamigos Foundation</strong> from 15/12/2024 to 02/01/2025.
+                        Collaborated on creative design projects, enhancing visual communication and branding skills.
+                        Recognized for being hardworking, result-oriented, and sincere, contributing effectively to
+                        assigned tasks and creative outputs.
+                    </p>
+                    <div class="col-1"><a href="gd.html" class="btn btn-outline-danger w-5"> View</a></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- My Work -->
+
+        <div class="container-fluid work ">
+            <div class="ser text-center">
+                <h1 class=" mb-3 my text-white wow animate__animated animate__fadeIn animate__slow">My <span
+                        class="s">Works</span></h1>
+                <p
+                    class="mb-5 px-2 text-white justify-content-justify wow animate__animated animate__fadeIn animate__slow">
+                    My work is focused on delivering <b>creative, functional, and user-centered solutions</b>. From
+                    designing
+                    modern and responsive websites to building smooth <b>UI/UX interfaces</b> and impactful <b>graphic
+                        designs</b>,
+                    I turn ideas into digital experiences that stand out. Each project reflects my commitment to detail,
+                    performance, and originality—ensuring that every design not only looks great but also works
+                    seamlessly
+                    for the user.
+                </p>
+
+            </div>
+            <div
+                class="row px-4 d-fluid justify-content-center wow  animate__animated animate__fadeIn animate__slow  sr">
+                <div class="col-md-5  card border sd ms" id="cad">
+                    <a href=""><img src="7.PNG" alt="WD" class="card-img-top  p1"></a>
+                </div>
+                <div class="col-md-5  card border sd ms" id="cad">
+                    <a href="lopemay.html"><img src="lopemay.PNG" alt="WD" class="card-img-top  p1"></a>
+                </div>
+
+
+
+                <div class="col-md-5   card border sd ms" id="cad">
+                    <a href="gd.html"><img src="your_name-transformed.png" alt="GD" class="card-img-top  p2 "></a>
+
+                </div>
+            </div>
+            <div class="row d-flex my-5 text-center wow  animate__animated animate__fadeIn animate__slow ">
+                <div class="col-12 ">
+                    <a href="project.html" class="btn ex rounded-pill ">See More!</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog -->
+
+        <div class="container-fluid about blog">
+            <div class="row ">
+                <div class="col-md-6 a_box ">
+                    <div class="row">
+                        <div class="col-12  p-2">
+                            <h1 class=" mb-1 my text-white wow animate__animated animate__fadeIn animate__slow">My <span
+                                    class="s">Blogs</span></h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div
+                            class="col-12 my-2 text-white a_p mb-1 wow animate__animated animate__fadeIn animate__slower ">
+                            <p>Web Design, WordPress & Shopify Tips
+                                Explore my blog – a space where I share expert insights, helpful guides, and real-world
+                                tips
+                                from my experience as a web
+                                designer and developer. Whether you’re just starting out or running an online business,
+                                my
+                                blog will help you build
+                                better websites, optimize your online store, and grow your digital presence.
+                            </p>
+                            <p>I write about everything I work with – WordPress, Shopify, Elementor Pro, graphic design,
+                                and
+                                more. Each blog post is
+                                packed with practical advice, step-by-step tutorials, and strategies to make your
+                                website
+                                faster, SEO-friendly, and
+                                mobile-responsive.
+                            </p>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="row mt-1">
+                        <div class=" rebt ">
+                            <div class=" rebut d-flex ">
+                                <a href="#"
+                                    class=" rounded-pill btn-outline btn px-2 cont mx-1 wow animate__animated animate__fadeIn animate__slow ">Explore<span
+                                        class=" fs-6">&#8594;</span></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 p-2">
+                    <div class="row  mx-2 ">
+                        <div class="col-md-12  ">
+                            <img src="admi.png" alt="A 3D model of an astronaut"
+                                class="admi wow animate__animated animate__zoomIn  animate__slower">
+                            </img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="footer container-fluid wow animate__animated animate__fadeIn animate__slow ">
+            <footer>
+                <div class="row mt-4 ft ">
+                    <div class="col-md-12  ">
+                        <div class="row ftr">
+                            <div class="col-md-3  ">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <h4 class="  bg-primary  px-1 ms-2  rounded-pill text-white ">Satyam
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p class="text-white fp">Here I declare that everything what I mentioned is real and owned by me.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Quick link -->
+
+                            <div class="col-md-2  ">
+                                <div class=" d-flex">
+
+                                    <div class="fotlink">
+                                        <h6 class="fh">Quick Links</h6>
+                                        <ul class="fl p-0">
+                                            <li><a href="#"><i
+                                                        class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Home</a>
+                                            </li>
+                                            <li><a href="#about"><i
+                                                        class="fa-solid fa-arrow-up-right-from-square mx-1"></i>About</a>
+                                            </li>
+                                            <li><a href="service.html"><i
+                                                        class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Service</a>
+                                            </li>
+                                            <li><a href="project.html"><i
+                                                        class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Project</a>
+                                            </li>
+                                            <li><a href="contact.html"><i
+                                                        class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Contact</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Contactfor mobile -->
+
+                            <div class="col-md-6 mobfooter ms-2">
+                                <div class=" ">
+
+                                    <div class="contact ">
+                                        <h6 class="text-white ms-2">Contact</h6>
+                                        <p><i class="fa-solid fa-phone-volume mx-2 text-secondary"></i>+91-9616801911
+                                        </p>
+                                        <p> <i class="fa-solid fa-at mx-2 text-primary"></i>satyamtripathipm@gmail.com
+                                        </p>
+                                        <p><i class="fa-solid fa-location-dot mx-2 text-danger"></i>Varanasi,
+                                            Uttar
+                                            Pradesh BHARAT</p>
+
+
+                                    </div>
+                                </div>
+
+
+                                <div class="row ">
+                                    <div class="col-md-12 dftext ms-2">
+                                        <h6 class="text-white">Get the latest information</h6>
+                                        <p class="text-white ">Reach out!</p>
+                                    </div>
+                                </div>
+                                <div class="row social  ">
+                                    <div class="col-1"><a href="https://www.instagram.com/satyamtripathi1978/" class="insta"><i
+                                                class="fa-brands fa-instagram "></i></a>
+                                    </div>
+                                    <div class="col-1"><a href="https://www.linkedin.com/in/satyam-tripathi-3a435934b" class="linked"><i
+                                                class="fa-brands fa-linkedin lid"></i></a>
+                                    </div>
+                                    <div class="col-1"><a href="https://github.com/satyam1978" class="git"><i
+                                                class="fa-brands fa-github"></i></a>
+                                    </div>
+                                    <div class="col-1"><a href="" class="twit"><i
+                                                class="fa-brands fa-x-twitter tt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Contact for Large Screen -->
+
+                            <div class="col-md-4 largefooter">
+                                <div class=" ">
+
+                                    <div class="contact ">
+                                        <h6 class="text-white ms-2">Contact</h6>
+                                        <p><i class="fa-solid fa-phone-volume mx-2 text-secondary"></i>+91-9616801911
+                                        </p>
+                                        <p> <i class="fa-solid fa-at mx-2 text-primary"></i>satyamtripathipm@gmail.com
+                                        </p>
+                                        <p><i class="fa-solid fa-location-dot mx-2 text-danger"></i>Varanasi,
+                                            Uttar
+                                            Pradesh BHARAT</p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3  largefooter">
+                                <div class="row  socil">
+                                    <div class="col-12 ftext">
+                                        <h6 class="text-white">Get the latest information</h6>
+                                        <p class="text-white">Reach out!</p>
+                                    </div>
+                                </div>
+                                <div class="row social  ">
+                                    <div class="col-2"><a href="https://www.instagram.com/satyamtripathi1978/" class="insta"><i
+                                                class="fa-brands fa-instagram "></i></a>
+                                    </div>
+                                    <div class="col-2"><a href="https://www.linkedin.com/in/satyam-tripathi-3a435934b" class="linked"><i
+                                                class="fa-brands fa-linkedin lid"></i></a>
+                                    </div>
+                                    <div class="col-2"><a href="https://github.com/satyam1978" class="fb"><i
+                                                class="fa-brands fa-github"></i></a>
+                                    </div>
+                                    <div class="col-2"><a href="" class="twit"><i
+                                                class="fa-brands fa-x-twitter tt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="text-white mx-0  mb-2">
+
+                <div class="row ">
+                    <div class="col-md-12">
+                        <div class="row p-2 ">
+                            <div class="col-md-5 copy ">
+                                <span class="text-white">Copyright © 2025 Royd. All Rights Reserved.</span>
+                            </div>
+                            <div class="col-md-5 ms-auto imp bottomfooter">
+                                <a href="privacy.html" class="me-4"> <i
+                                        class="fa-solid fa-square-arrow-up-right"></i>Privacy
+                                    Policy</a>
+                                <a href="terms.html"> <i class="fa-solid fa-square-arrow-up-right"></i>Terms &
+                                    Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Script to hide loader -->
+    <script>
+  window.addEventListener("load", () => {
+    // site fully loaded
+    setTimeout(() => {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("page-content").style.display = "block";
+    }, ); // optional delay (1s fade effect)
+  });
+</script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <!--Jquery CDN By google-->
+    <script src="wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <script type="module">
+        import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+
+        new DotLottie({
+            autoplay: true,
+            loop: true,
+            canvas: document.getElementById("lottie-bg"),
+            src: "https://lottie.host/0ea494a1-9f98-487f-b335-af4570f9bc99/HMK3KvJTec.lottie"
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>

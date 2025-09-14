@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    <title> Satyam - Web Projects </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <style>
+        body {
+            background: radial-gradient(rgb(20, 5, 44), rgb(0, 0, 15));
+        }
+
+
+        .header-image {
+            position: relative;
+            top: -3rem;
+            background: url("") center/cover no-repeat;
+        }
+
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.575);
+        }
+
+        .header-content {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            color: white;
+            z-index: 2;
+        }
+
+        .view-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        
+        .gallery-img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+
+        .github-icon {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: #333;
+            background: white;
+            border-radius: 50%;
+            padding: 2px 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: 0.3s ease, color 0.3s ease;
+        }
+
+        .github-icon:hover {
+            background: #333;
+            color: white;
+        }
+
+        footer{
+            background-color: black;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+
+    
+    <a href="https://github.com/satyam1978/Solution24" target="_blank" class="github-icon">
+        <i class="bi bi-github"></i>
+    </a>
+
+
+    
+   
+    <header class="header-image">
+        <div id="slider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="solution24 1.PNG" width="100%" height="450">
+
+                    
+                </div>
+
+                <div class="carousel-item">
+                    <img src="solution24 1.PNG" alt="" width="100%" height="450">
+                   
+                </div>
+
+                <div class="carousel-item">
+                    <img src="solution24 2.PNG" alt="" width="100%" height="450">
+                </div>
+            </div>
+            <a href="#slider" class="carousel-control-prev" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a href="#slider" class="carousel-control-next" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>
+        </div>
+        <div class="header-overlay"></div>
+
+
+
+        <div class="view-btn">
+            <a href="https://solution24.netlify.app/" target="_blank" class="btn btn-danger btn-md">View Live</a>
+        </div>
+        <div class="header-content">
+            <h3>Solution 24 – Empowering Minds with Free IT Education</h3>
+            <p class="">Solution 24 is a educational website that dedicated to delivering 100% free</p>
+        </div>
+    </header>
+
+   <!-- About Content -->
+    <h3 class=" border py-1 px-2 ms-2 me-2  mb-0 rounded-pill text-primary border-0 sat"><a href="index.html"
+            class="nav-link"><i class="fa-solid fa-house"></i></a>
+    </h3>
+    <section class="container py-3">
+        <h2 class="text-white mb-4">
+            About the <span class="text-info">Project</span>
+        </h2><span class="text-white">
+            <h2>Solution 24 – Your Free IT Learning Hub</h2>
+        
+            <p>
+                <strong>Solution 24</strong> was created with the mission to break the barrier between learners and technology
+                by offering completely free, high-quality IT courses.
+                Instead of selling products like a traditional vendor site, Solution 24 “vendors” knowledge—acting as a
+                marketplace for skills that can help individuals grow in their professional and personal lives.
+            </p>
+        
+            <p>
+                The idea originated from observing how many aspiring learners in rural and urban areas face limitations due to
+                high course fees or lack of quality resources.
+                This inspired me to create a platform that delivers value without cost, but with the same level of
+                professionalism and user experience as paid platforms.
+            </p>
+        
+            <h3>Design & Development Process</h3>
+        
+            <h4>1. Research & Planning</h4>
+            <p>
+                I studied popular e-learning and vendor-style sites to merge the concept of online education with the simplicity
+                of a marketplace layout.
+                My goal was to make navigation feel like shopping—only instead of products, you browse courses.
+            </p>
+        
+            <h4>2. UI/UX Design</h4>
+            <ul>
+                <li>Created a clean and visually appealing interface using <strong>HTML5, CSS3, and JavaScript</strong></li>
+                <li>Mobile-first design ensuring full responsiveness across devices</li>
+                <li>Bold headings, well-structured course cards, and vendor-style category sections for quick access</li>
+            </ul>
+        
+            <h4>3. Development</h4>
+            <ul>
+                <li><strong>HTML5</strong> for semantic structure and SEO-friendly layouts</li>
+                <li><strong>CSS3</strong> for styling, grid/flexbox layouts, and hover animations to make browsing engaging</li>
+                <li><strong>JavaScript</strong> for interactive elements, navigation effects, and dynamic loading</li>
+                <li>Fully hosted on <strong>Netlify</strong> for fast global accessibility and zero downtime</li>
+            </ul>
+        
+            <h4>4. Optimization</h4>
+            <ul>
+                <li>Minimized CSS and JavaScript for faster load times</li>
+                <li>Tested on multiple browsers and devices to ensure compatibility</li>
+            </ul>
+        
+            <h3>Key Features</h3>
+            <ul>
+                <li>Free courses covering MS Office, Artificial Intelligence, Web Development, Data Analytics, Networking,
+                    Graphic Design, and more</li>
+                <li>Category-based navigation designed like a vendor shop for faster course discovery</li>
+                <li>Clean & responsive design for learning on desktops, tablets, and mobiles</li>
+                <li>Fast hosting & deployment powered by Netlify</li>
+            </ul>
+        
+            <h3>Outcome & Impact</h3>
+            <p>
+                <strong>Solution 24</strong> received positive feedback from peers and early users for its easy-to-navigate
+                design, professional look, and meaningful purpose.
+                It is not just a website—it’s a learning hub for students, job seekers, and working professionals who want to
+                upskill without worrying about financial constraints.
+            </p>
+        
+            <p>
+                This project showcases my skills as a <strong>full-cycle web developer</strong>—from ideation, design, and
+                coding to deployment and user experience optimization.
+            </p>
+        </span>
+
+    </section>
+
+   
+    <section class="container pb-5">
+        <h3 class="text-white">Project Screenshots</h3>
+        <div class="row g-4 mt-2">
+            <div class="col-md-4">
+                <img src="solution24.PNG" alt="solution24" class="gallery-img" />
+            </div>
+            <div class="col-md-4">
+                <img src="solution24 1.PNG" alt="solution24" class="gallery-img" />
+            </div>
+            <div class="col-md-4">
+                <img src="solution24 2.PNG" alt="solution24" class="gallery-img" />
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="container pb-1">
+        <h3 class="text-danger">Source Code</h3>
+        <ul class="nav nav-tabs mt-3" id="codeTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="html-tab" data-bs-toggle="tab" data-bs-target="#htmlCode"
+                    type="button" role="tab">
+                    HTML
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="css-tab" data-bs-toggle="tab" data-bs-target="#cssCode" type="button"
+                    role="tab">
+                    CSS
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="js-tab" data-bs-toggle="tab" data-bs-target="#jsCode" type="button"
+                    role="tab">
+                    JavaScript
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content mt-3 sc">
+
+            <div class="tab-pane fade show active text-success" id="htmlCode" role="tabpanel">
+                <pre><code class="language-html">
+                &lt;body&gt;
+                    &lt;header&gt;
+                        &lt;h1&gt;
+     Solution &lt;span style="color:#13a75d;"&gt;24&lt;/span&gt;
+                        &lt;/h1&gt;
+
+                        &lt;!-- Menu Toggle for Mobile --&gt;
+&lt;div class="menu-toggle" id="menu-toggle"&gt;&amp;#9776;&lt;/div&gt;
+                
+                        &lt;nav class="navbar"&gt;
+                            &lt;ul&gt;
+ &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                
+                                &lt;li class="dropdown"&gt;
+                                    &lt;a href="#"&gt;Services&lt;/a&gt;
+       &lt;li&gt;&lt;a href="services/consult.html"&gt;Consulting&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href="services/training.html"&gt;Training&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="services/job.html"&gt;Jobs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="services/intern.html"&gt;Internship&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href="services/support.html"&gt;Support&lt;/a&gt;&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                &lt;/li&gt;
+                
+                                &lt;li class="dropdown"&gt;
+                                    &lt;a href="#"&gt;Courses&lt;/a&gt;
+                                   
+                        &lt;/nav&gt;
+                    &lt;/header&gt;
+                &lt;/body&gt;
+                </code></pre>
+
+            </div>
+            <div class="tab-pane fade text-warning " id="cssCode" role="tabpanel">
+
+                <pre><code class="language-css">
+.content h4 {
+font-size: clamp(1.2rem, 3vw, 1.6rem);
+margin-bottom: 1.1rem;
+align-items: center;
+display: flex;
+justify-content: center;
+font-weight: bold;
+}
+
+.solution {
+font-size: clamp(2.5rem, 6vw, 5rem);
+border-radius: 5px;
+font-weight: bold;
+text-align: center;
+
+}
+
+.course {
+font-size: clamp(1.5rem, 4vw, 1.5rem);
+margin-top: 1.1rem;
+margin-bottom: 1rem;
+text-align: center;
+font-weight: bold;
+}
+</code></pre>
+            </div>
+            <div class="tab-pane fade text-white" id="jsCode" role="tabpanel">
+                <pre><code class="language-javascript">
+  
+document.addEventListener("DOMContentLoaded", () => {
+const form = document.querySelector(".contact-form");
+
+form.addEventListener("submit", function (e) {
+e.preventDefault(); // Prevent form from refreshing page or scrolling
+alert("Message sent successfully!");
+
+// Optionally, reset form fields
+form.reset();
+});
+});
+
+const currentPage = window.location.pathname.split("/").pop();
+
+document.querySelectorAll("nav ul li a").forEach(link => {
+if (link.getAttribute("href") === currentPage) {
+link.classList.add("active");
+}
+});
+
+document.querySelectorAll('a[href="#"]').forEach(link => {
+link.addEventListener('click', e => e.preventDefault());
+});
+                </code></pre>
+
+
+            </div>
+        </div>
+    </section>
+
+  
+<!-- footer -->
+<div class="footer container-fluid wow animate__animated animate__fadeIn animate__slow ">
+    <footer>
+        <div class="row mt-4 ft ">
+            <div class="col-md-12  ">
+                <div class="row ftr">
+                    <div class="col-md-3  ">
+                        <div class="row">
+                            <div class="col-5">
+                                <h4 class="  bg-primary  px-1 ms-2  rounded-pill text-white ">Satyam
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="text-white fp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                    elit tellus, luctus nec ullamcorper mattis, pulvinar
+                                    dapibus
+                                    leo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick link -->
+
+                    <div class="col-md-2  ">
+                        <div class=" d-flex">
+
+                            <div class="fotlink">
+                                <h6 class="fh">Quick Links</h6>
+                                <ul class="fl p-0">
+                                    <li><a href="#"><i class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Home</a>
+                                    </li>
+                                    <li><a href="#about"><i
+                                                class="fa-solid fa-arrow-up-right-from-square mx-1"></i>About</a>
+                                    </li>
+                                    <li><a href="service.html"><i
+                                                class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Service</a>
+                                    </li>
+                                    <li><a href="project.html"><i
+                                                class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Project</a>
+                                    </li>
+                                    <li><a href="contact.html"><i
+                                                class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contactfor mobile -->
+
+                    <div class="col-md-6 mobfooter ms-2">
+                        <div class=" ">
+
+                            <div class="contact ">
+                                <h6 class="text-white ms-2">Contact</h6>
+                                <p><i class="fa-solid fa-phone-volume mx-2 text-secondary"></i>+91-9616801911
+                                </p>
+                                <p> <i class="fa-solid fa-at mx-2 text-primary"></i>satyamtripathipm@gmail.com
+                                </p>
+                                <p><i class="fa-solid fa-location-dot mx-2 text-danger"></i>Varanasi,
+                                    Uttar
+                                    Pradesh BHARAT</p>
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="row ">
+                            <div class="col-md-12 dftext ms-2">
+                                <h6 class="text-white">Get the latest information</h6>
+                                <p class="text-white ">Reach out!</p>
+                            </div>
+                        </div>
+                        <div class="row social  ">
+                            <div class="col-1"><a href="" class="insta"><i class="fa-brands fa-instagram "></i></a>
+                            </div>
+                            <div class="col-1"><a href="" class="linked"><i class="fa-brands fa-linkedin lid"></i></a>
+                            </div>
+                            <div class="col-1"><a href="" class="fb"><i class="fa-brands fa-square-facebook fb"></i></a>
+                            </div>
+                            <div class="col-1"><a href="" class="twit"><i class="fa-brands fa-x-twitter tt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Contact for Large Screen -->
+
+                    <div class="col-md-4 largefooter">
+                        <div class=" ">
+
+                            <div class="contact ">
+                                <h6 class="text-white ms-2">Contact</h6>
+                                <p><i class="fa-solid fa-phone-volume mx-2 text-secondary"></i>+91-9616801911
+                                </p>
+                                <p> <i class="fa-solid fa-at mx-2 text-primary"></i>satyamtripathipm@gmail.com
+                                </p>
+                                <p><i class="fa-solid fa-location-dot mx-2 text-danger"></i>Varanasi,
+                                    Uttar
+                                    Pradesh BHARAT</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3  largefooter">
+                        <div class="row  socil">
+                            <div class="col-12 ftext">
+                                <h6 class="text-white">Get the latest information</h6>
+                                <p class="text-white">Reach out!</p>
+                            </div>
+                        </div>
+                        <div class="row social  ">
+                            <div class="col-2"><a href="" class="insta"><i class="fa-brands fa-instagram "></i></a>
+                            </div>
+                            <div class="col-2"><a href="" class="linked"><i class="fa-brands fa-linkedin lid"></i></a>
+                            </div>
+                            <div class="col-2"><a href="" class="fb"><i class="fa-brands fa-square-facebook fb"></i></a>
+                            </div>
+                            <div class="col-2"><a href="" class="twit"><i class="fa-brands fa-x-twitter tt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="text-white mx-0  mb-2">
+
+        <div class="row ">
+            <div class="col-md-12">
+                <div class="row p-2">
+                    <div class="col-md-5 copy ">
+                        <span class="text-white">Copyright © 2025 Royd. All Rights Reserved.</span>
+                    </div>
+                    <div class="col-md-5 ms-auto imp">
+                        <a href="privacy.html" class="me-4"> <i class="fa-solid fa-square-arrow-up-right"></i>Privacy
+                            Policy</a>
+                        <a href="terms.html"> <i class="fa-solid fa-square-arrow-up-right"></i>Terms &
+                            Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

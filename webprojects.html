@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+             background: radial-gradient(rgb(20, 5, 44), rgb(0, 0, 15));
+            font-family: Arial, sans-serif;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 3rem 1rem;
+            
+            color: white;
+            margin-bottom: 2rem;
+             
+        }
+
+        .project-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0px 4px 15px rgba(12, 12, 12, 0.247);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 15px rgba(97, 167, 214, 0.664);
+        }
+
+        .project-img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-title {
+            
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-btn {
+            border-radius: 20px;
+            padding: 0.4rem 1.2rem;
+        }
+
+        .sat{
+            position: absolute;
+            left: 2rem;
+            top: 3rem;
+        }
+
+
+        .footer {
+            background-color: black;
+        }
+
+        @media screen and (max-width: 776px){
+            .sat{
+            position: absolute;
+            left: .5rem;
+            top: 1.5rem;
+        }
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="container   sat">
+        <nav class="navbar navbar-expand-lg  ">
+            <div class="container-fluid ">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class=" border bg-primary py-1 px-2 ms-2 me-2  mb-0 rounded-pill text-white border-0">
+                            <a href="index.html" class="nav-link">Satyam</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    
+    <div class="page-header">
+        <h1 class="mt-5">Web <span class="text-info">Projects</span></h1>
+        <p>Explore my collection of web development works</p>
+    </div>
+
+    <!-- Proj Gd -->
+    <div class="container ">
+        <div class="row g-4">
+
+            <!-- P 1 -->
+            <div class="col-md-4">
+                <div class="project-card bg-white">
+                    <img src="lopemay.PNG" alt="Project 1" class="w-100 project-img">
+                    <div class="p-3">
+                        <div class="project-title">Vendor Website</div>
+                        <p>Lopemay is a lightweight, responsive web template built for connecting vendors and suppliers with speed and simplicity.</p>
+                        <a href="lopemay.html" class="btn  btn-outline-info btn-sm">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- P 2 -->
+            <div class="col-md-4">
+                <div class="project-card bg-white">
+                    <img src="tech-li.PNG" alt="Project 2" class="w-100 project-img">
+                    <div class="p-3">
+                        <div class="project-title">Tech-Lie Website</div>
+                        <p>Tech-Lie showcasing a suite of services including App Development, Web
+                        Development, and Graphic Design.</p>
+                        <a href="techlie.html" class="btn btn-outline-info btn-sm">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- P 3 -->
+            <div class="col-md-4">
+                <div class="project-card bg-white">
+                    <img src="solution24.PNG" alt="Project 3" class="w-100 project-img">
+                    <div class="p-3">
+                        <div class="project-title">Solution 24 Learning Platform</div>
+                        <p>Solution 24 is a user-friendly educational platform offering free, job-ready computer courses.</p>
+                        <a href="solution24.html" class="btn btn-outline-info btn-sm">View Project</a>
+                    </div>
+                </div>
+            </div>
+</div>
+    </div>
+
+        <!-- footer -->
+        <div class="footer container-fluid wow animate__animated animate__fadeIn animate__slow ">
+            <footer>
+                <div class="row mt-4 ft ">
+                    <div class="col-md-12  ">
+                        <div class="row ftr">
+                            <div class="col-md-3  ">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <h4 class="  bg-primary  px-1 ms-2  rounded-pill text-white ">Satyam
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p class="text-white fp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                            elit tellus, luctus nec ullamcorper mattis, pulvinar
+                                            dapibus
+                                            leo.</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <!-- Quick link -->
+        
+                            <div class="col-md-2  ">
+                                <div class=" d-flex">
+        
+                                    <div class="fotlink">
+                                        <h6 class="fh">Quick Links</h6>
+                                        <ul class="fl p-0">
+                                            <li><a href="#"><i class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Home</a>
+                                            </li>
+                                            <li><a href="#about"><i
+                                                        class="fa-solid fa-arrow-up-right-from-square mx-1"></i>About</a>
+                                            </li>
+                                            <li><a href="service.html"><i
+                                                        class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Service</a>
+                                            </li>
+                                            <li><a href="project.html"><i
+                                                        class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Project</a>
+                                            </li>
+                                            <li><a href="contact.html"><i
+                                                        class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Contact</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <!-- Contactfor mobile -->
+        
+                            <div class="col-md-6 mobfooter ms-2">
+                                <div class=" ">
+        
+                                    <div class="contact ">
+                                        <h6 class="text-white ms-2">Contact</h6>
+                                        <p><i class="fa-solid fa-phone-volume mx-2 text-secondary"></i>+91-9616801911
+                                        </p>
+                                        <p> <i class="fa-solid fa-at mx-2 text-primary"></i>satyamtripathipm@gmail.com
+                                        </p>
+                                        <p><i class="fa-solid fa-location-dot mx-2 text-danger"></i>Varanasi,
+                                            Uttar
+                                            Pradesh BHARAT</p>
+        
+        
+                                    </div>
+                                </div>
+        
+        
+                                <div class="row ">
+                                    <div class="col-md-12 dftext ms-2">
+                                        <h6 class="text-white">Get the latest information</h6>
+                                        <p class="text-white ">Reach out!</p>
+                                    </div>
+                                </div>
+                                <div class="row social  ">
+                                    <div class="col-1"><a href="" class="insta"><i class="fa-brands fa-instagram "></i></a>
+                                    </div>
+                                    <div class="col-1"><a href="" class="linked"><i class="fa-brands fa-linkedin lid"></i></a>
+                                    </div>
+                                    <div class="col-1"><a href="" class="fb"><i class="fa-brands fa-square-facebook fb"></i></a>
+                                    </div>
+                                    <div class="col-1"><a href="" class="twit"><i class="fa-brands fa-x-twitter tt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+        
+        
+                            <!-- Contact for Large Screen -->
+        
+                            <div class="col-md-4 largefooter">
+                                <div class=" ">
+        
+                                    <div class="contact ">
+                                        <h6 class="text-white ms-2">Contact</h6>
+                                        <p><i class="fa-solid fa-phone-volume mx-2 text-secondary"></i>+91-9616801911
+                                        </p>
+                                        <p> <i class="fa-solid fa-at mx-2 text-primary"></i>satyamtripathipm@gmail.com
+                                        </p>
+                                        <p><i class="fa-solid fa-location-dot mx-2 text-danger"></i>Varanasi,
+                                            Uttar
+                                            Pradesh BHARAT</p>
+        
+        
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-md-3  largefooter">
+                                <div class="row  socil">
+                                    <div class="col-12 ftext">
+                                        <h6 class="text-white">Get the latest information</h6>
+                                        <p class="text-white">Reach out!</p>
+                                    </div>
+                                </div>
+                                <div class="row social  ">
+                                    <div class="col-2"><a href="" class="insta"><i class="fa-brands fa-instagram "></i></a>
+                                    </div>
+                                    <div class="col-2"><a href="" class="linked"><i class="fa-brands fa-linkedin lid"></i></a>
+                                    </div>
+                                    <div class="col-2"><a href="" class="fb"><i class="fa-brands fa-square-facebook fb"></i></a>
+                                    </div>
+                                    <div class="col-2"><a href="" class="twit"><i class="fa-brands fa-x-twitter tt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <hr class="text-white mx-0  mb-2">
+        
+                <div class="row ">
+                    <div class="col-md-12">
+                        <div class="row p-2">
+                            <div class="col-md-5 copy ">
+                                <span class="text-white">Copyright © 2025 Royd. All Rights Reserved.</span>
+                            </div>
+                            <div class="col-md-5 ms-auto imp">
+                                <a href="privacy.html" class="me-4"> <i class="fa-solid fa-square-arrow-up-right"></i>Privacy
+                                    Policy</a>
+                                <a href="terms.html"> <i class="fa-solid fa-square-arrow-up-right"></i>Terms &
+                                    Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Satyam - Hire</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: radial-gradient(rgb(20, 5, 44), rgb(0, 0, 15));
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            box-shadow: none !important;
+        }
+
+        .form {
+            margin: 0 .4rem;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            box-shadow: 0 0 5px 2px #727272;
+            max-width: 800px;
+            margin: 3rem auto;
+        }
+
+
+
+        .footer {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container mt-4  ">
+            <nav class="navbar navbar-expand-lg  ">
+                <div class="container-fluid ">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class=" border bg-primary py-1 px-2 ms-2 me-2  mb-0 rounded-pill text-white border-0"><a
+                                    href="index.html" class="nav-link">Satyam</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="form">
+
+        <div class="form-container  ">
+            <h2 class="text-center mb-4">Hire Me</h2>
+            <form id="hireForm" method="POST" action="save_hire.php">
+                <input type="hidden" name="form-name" value="hire">
+
+                <!-- Honeypot -->
+                <p style="display:none;">
+                    <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+                </p>
+
+                <!-- Name & Email -->
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Your Name*</label>
+                        <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Email Address*</label>
+                        <input type="email" name="email" class="form-control" placeholder="example@email.com" required>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="mt-3">
+                    <label class="form-label">Phone Number*</label>
+                    <div class="input-group">
+                        <select class="form-select" name="countryCode" style="max-width: 100px;">
+                            <option value="+1">+1</option>
+                            <option value="+44">+44</option>
+                            <option value="+91" selected>+91</option>
+                            <option value="+65">+65</option>
+                            <option value="+61">+61</option>
+                        </select>
+                        <input type="tel" name="phone" class="form-control" placeholder="9876543210" required>
+                    </div>
+                </div>
+
+                <!-- Project Type -->
+                <div class="mt-3">
+                    <label class="form-label">Project Type*</label>
+                    <select class="form-select" name="projectType" required>
+                        <option selected disabled>Select project type</option>
+                        <option>Website Development</option>
+                        <option>Mobile App Development</option>
+                        <option>UI/UX Design</option>
+                        <option>AI/ML Development</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <!-- Budget -->
+                <div class="mt-3">
+                    <label class="form-label">Budget Range*</label>
+                    <select class="form-select" name="budget" required>
+                        <option selected disabled>Select budget</option>
+                        <option>$100 - $500</option>
+                        <option>$500 - $1,000</option>
+                        <option>$1,000 - $5,000</option>
+                        <option>$5,000+</option>
+                    </select>
+                </div>
+
+                <!-- Deadline -->
+                <div class="mt-3">
+                    <label class="form-label">Deadline*</label>
+                    <input type="date" name="deadline" class="form-control" required>
+                </div>
+
+                <!-- Communication Preference -->
+                <div class="mt-3">
+                    <label class="form-label">Preferred Communication*</label>
+                    <select class="form-select" name="communication" required>
+                        <option selected disabled>Choose one</option>
+                        <option>Email</option>
+                        <option>Phone</option>
+                        <option>WhatsApp</option>
+                        <option>Video Call</option>
+                    </select>
+                </div>
+
+                <!-- Message -->
+                <div class="mt-3">
+                    <label class="form-label">Project Details*</label>
+                    <textarea class="form-control" name="details" rows="4" placeholder="Describe your project..."
+                        required></textarea>
+                </div>
+
+                <!-- Terms -->
+                <div class="mb-1 form-check">
+                    <input type="checkbox" class="form-check-input" name="terms" required>
+                    <label class="form-check-label">
+                        I agree to the
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms & Conditions</a>
+                    </label>
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" name="privacy" required>
+                    <label class="form-check-label">
+                        I agree to the
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <!-- Submit -->
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-success px-5 py-2">Send Request</button>
+                </div>
+            </form>
+
+
+        </div>
+
+        <!-- Terms & Conditions Modal -->
+        <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="termsModalLabel">Terms & Conditions</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Effective Date:</strong> 12 August 2025</p>
+                        <p>These Terms & Conditions (“Terms”) govern your use of our website, services, and any related
+                            content. By accessing or
+                            using our services, you agree to comply with these Terms. If you do not agree, you may not
+                            use our services.</p>
+
+                        <h2>1. Acceptance of Terms</h2>
+                        <p>By accessing this website or engaging our services, you confirm that you have read,
+                            understood, and agree to these
+                            Terms.</p>
+
+                        <h2>2. Services Provided</h2>
+                        <p>We offer web development, design, and related professional services. The exact scope,
+                            pricing, and timeline will be
+                            agreed upon before starting any project.</p>
+
+                        <h2>3. User Responsibilities</h2>
+                        <ul>
+                            <li>You must provide accurate and complete information when contacting or hiring us.</li>
+                            <li>You agree not to use our services for any illegal, harmful, or unethical purposes.</li>
+                            <li>You are responsible for ensuring that any materials you provide do not infringe on
+                                third-party rights.</li>
+                        </ul>
+
+                        <h2>4. Payments & Refunds</h2>
+                        <ul>
+                            <li>Payment terms will be outlined in the agreed proposal or invoice.</li>
+                            <li>Refunds are only provided in cases where services have not commenced or as agreed in
+                                writing.</li>
+                        </ul>
+
+                        <h2>5. Intellectual Property</h2>
+                        <p>All designs, code, and deliverables created by us remain our property until full payment is
+                            received. Upon full
+                            payment, ownership is transferred to you unless otherwise stated in the agreement.</p>
+
+                        <h2>6. Limitation of Liability</h2>
+                        <p>We are not liable for any indirect, incidental, or consequential damages arising from the use
+                            of our services or
+                            website.</p>
+
+                        <h2>7. Termination</h2>
+                        <p>We reserve the right to terminate services if you breach these Terms or engage in conduct
+                            harmful to our business or
+                            reputation.</p>
+
+                        <h2>8. External Links</h2>
+                        <p>Our website may contain links to third-party websites. We are not responsible for their
+                            content or privacy practices.
+                        </p>
+
+                        <h2>9. Changes to Terms</h2>
+                        <p>We may update these Terms from time to time. Any changes will be posted on this page with the
+                            updated effective date.
+                        </p>
+
+                        <h2>10. Governing Law</h2>
+                        <p>These Terms are governed by the laws of India, without regard to its conflict of law
+                            principles.</p>
+
+                        <h2>11. Contact Information</h2>
+                        <p>If you have any questions about these Terms, you can contact us at:</p>
+                        <p><strong>Email:</strong> satyamtripathipm@gmail.com<br>
+                            <strong>Phone:</strong> +91-9616801911<br>
+                            <strong>Address:</strong> Varanasi Uttar Pradesh BHARAT
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Privacy Policy Modal -->
+        <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Effective Date:</strong> 12 August 2025</p>
+                        <p>This Privacy Policy explains how we collect, use, disclose, and protect your information when
+                            you use
+                            our
+                            services, visit our website, or interact with us. By using our services, you agree to the
+                            terms
+                            outlined in
+                            this policy.</p>
+
+                        <h2>1. Information We Collect</h2>
+                        <p>We may collect the following types of information:</p>
+                        <ul>
+                            <li><strong>Personal Information:</strong> Name, email address, phone number, address, date
+                                of
+                                birth, and
+                                other identifiers you provide when contacting or hiring us.</li>
+                            <li><strong>Business Information:</strong> Company name, website, industry, and other
+                                relevant
+                                details.</li>
+                            <li><strong>Technical Information:</strong> IP address, browser type, device information,
+                                and usage
+                                data
+                                collected automatically when you use our website.</li>
+                            <li><strong>Social & Professional Links:</strong> LinkedIn, Instagram, Facebook, Twitter, or
+                                other
+                                links you
+                                share with us.</li>
+                        </ul>
+
+                        <h2>2. How We Use Your Information</h2>
+                        <p>We may use your information for the following purposes:</p>
+                        <ul>
+                            <li>To provide, operate, and maintain our services.</li>
+                            <li>To communicate with you regarding inquiries, projects, and service updates.</li>
+                            <li>To personalize user experience and improve our website.</li>
+                            <li>To process payments and send invoices.</li>
+                            <li>To comply with legal obligations and protect against fraud.</li>
+                        </ul>
+
+                        <h2>3. Sharing & Disclosure</h2>
+                        <p>We do not sell or rent your personal information. We may share your data only in the
+                            following cases:
+                        </p>
+                        <ul>
+                            <li>With your consent.</li>
+                            <li>With trusted service providers who assist us in operating our services.</li>
+                            <li>When required by law, court order, or government authority.</li>
+                            <li>To protect the safety, rights, or property of our business and users.</li>
+                        </ul>
+
+                        <h2>4. Data Security</h2>
+                        <p>We implement reasonable security measures to protect your personal data from unauthorized
+                            access,
+                            alteration,
+                            disclosure, or destruction. However, no method of transmission over the internet is 100%
+                            secure.</p>
+
+                        <h2>5. Data Retention</h2>
+                        <p>We retain your information only for as long as necessary to fulfill the purposes for which it
+                            was
+                            collected
+                            or as required by law.</p>
+
+                        <h2>6. Your Rights</h2>
+                        <p>Depending on your location, you may have the right to:</p>
+                        <ul>
+                            <li>Access, update, or delete your personal information.</li>
+                            <li>Withdraw consent for processing your data.</li>
+                            <li>Request a copy of the information we hold about you.</li>
+                        </ul>
+
+                        <h2>7. Third-Party Links</h2>
+                        <p>Our website may contain links to third-party websites. We are not responsible for the privacy
+                            practices of
+                            such websites.</p>
+
+                        <h2>8. Updates to This Policy</h2>
+                        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page
+                            with the
+                            updated
+                            effective date.</p>
+
+                        <h2>9. Contact Us</h2>
+                        <p>If you have any questions about this Privacy Policy or our data practices, please contact us
+                            at:</p>
+                        <p><strong>Email:</strong> satyamtripathipm@gmail.com<br>
+                            <strong>Phone:</strong> +91-9616801911<br>
+                            <strong>Address:</strong> Varanasi Uttar Pradesh BHARAT
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer container-fluid ">
+        <footer class="">
+            <hr class="text-white mx-0  mb-2">
+
+            <div class="row ">
+                <div class="col-md-12">
+                    <div class="row p-2">
+                        <div class="col-md-5 copy ">
+                            <span class="text-white">Copyright © 2025 Royd. All Rights Reserved.</span>
+                        </div>
+                        <div class="col-md-5 ms-auto imp">
+                            <a href="privacy.html" class="me-4"> <i
+                                    class="fa-solid fa-square-arrow-up-right"></i>Privacy
+                                Policy</a>
+                            <a href="terms.html"> <i class="fa-solid fa-square-arrow-up-right"></i>Terms &
+                                Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

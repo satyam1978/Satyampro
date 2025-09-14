@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >    <title>Graphic Design Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: radial-gradient(rgb(20, 5, 44), rgb(0, 0, 15));
+        }
+
+        .portfolio-card {
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .portfolio-info {
+            padding: 15px;
+            background: white;
+        }
+
+        .modal-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .crt {
+            color: rgb(0, 153, 255);
+        }
+
+        footer{
+            background-color: black;
+        }
+            
+        
+    </style>
+</head>
+
+<body>
+    
+    <!-- Certificate/Achivement -->
+    
+    <div class="container-fluid achiv mt-0 pt-0">
+        <header class="s">
+            <div class="container sat pt-4 ">
+                <nav class="navbar navbar-expand-lg  ">
+                    <div class="container-fluid ">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class=" border bg-primary py-1 px-2 ms-2 me-2  mb-0 rounded-pill text-white border-0"><a
+                                        href="index.html" class="nav-link">Satyam</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <h1 class="text-center mb-4 pt-4 text-white wow animate__animated animate__fadeIn animate__slow">My Achivements<span
+                class="crt"> and Certificates</span></h1>
+        <p class="text-center text-white mb-5 wow animate__animated animate__fadeIn animate__slow">Here are some of my best
+            works ownered with certificates.</p>
+    
+        <div class="row g-4 wow animate__animated animate__fadeIn animate__slow  cr">
+            <!-- Certificate 1 -->
+            <div class="col-md-4">
+                <div class="portfolio-card" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                    <img src="Certificates/Inamigos_page-0001.jpg" alt="Amigos" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <h5 class="mb-1">Graphic Design Internship</h5>
+                        <small class="text-muted">Recognized for being hardworking, result-oriented, and sincere, contributing effectively to
+                        assigned tasks and creative outputs.</small>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Certificate 2 -->
+            <div class="col-md-4">
+                <div class="portfolio-card" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                    <img src="Certificates/guvi.png" alt="Social Media" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <h5 class="mb-1">AKTU AI Tech Hackathon 2025</h5>
+                        <small class="text-muted">Smart Study Planner by Team SAGA helps users organize schedules, track
+                            progress, and boost learning efficiency through a
+                            clean, responsive ui.</small>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Certificate 3 -->
+            <div class="col-md-4">
+                <div class="portfolio-card" data-bs-toggle="modal" data-bs-target="#projectModal3">
+                    <img src="Certificates/Tutedute.jpg" alt="Tutedude" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <h5 class="mb-1">Tutedude Web Development Hackathon</h5>
+                        <small class="text-muted">The hackathon tested both
+                            speed and
+                            precision in designing functional, scalable, and user-friendly web applications.</small>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+        
+    </div>
+    
+    
+    
+    <!-- certificate Modals -->
+    
+    <!-- Modal 1 -->
+    <div class="modal fade" id="projectModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content p-3">
+                <div class="d-flex">
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <img src="Certificates/Inamigos_page-0001.jpg" alt="Modern Logo" class="modal-img">
+                <h5 class="mt-3">Graphic Designing Internship</h5>
+                <p>
+                    Successfully completed a two-week <strong>Graphic Designing Internship</strong> at
+                    <strong>Inamigos Foundation</strong> from 15/12/2024 to 02/01/2025.
+                    Collaborated on creative design projects, enhancing visual communication and branding skills.
+                    Recognized for being hardworking, result-oriented, and sincere, contributing effectively to
+                    assigned tasks and creative outputs.
+                </p>
+                <div class="col-1"><a href="gd.html" class="btn btn-outline-danger w-5"> View</a></div>
+                </div>
+            </div>
+        </div>
+  
+    
+    <!-- Modal 2 -->
+    <div class="modal fade" id="projectModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content p-3">
+                <div class="d-flex">
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <img src="Certificates/guvi.png" alt="GUVI Hackathon" class="modal-img">
+                <h5 class="mt-3">Smart Study Planner</h5>
+                <p>
+                    The Smart Study Planner is a productivity-focused web application designed to help students and
+                    professionals efficiently organize their learning schedules. Developed by <strong>Team SAGA</strong> —
+                    Satyam Tripathi and Gaurav Kumar Maurya — the platform enables users to create customized study
+                    plans, monitor progress, and stay consistent with reminders and deadlines. Its clean, responsive
+                    interface ensures seamless usability across devices, while key features such as task scheduling,
+                    progress tracking, and adaptive adjustments promote goal-oriented learning. This project reflects
+                    strong skills in <strong>UI/UX design</strong>, front-end development, and collaborative
+                    problem-solving.
+                </p>
+                <p><strong>ID:</strong> 7cn7W61S1948hr1t96</p>
+                <p><strong>URL:</strong> <a href="https://www.guvi.in/share-certificate/7cn7W61S1948hr1t96">click</a></p>
+                <div class="row">
+                    <div class="col-1"><a href="study-planner.html" class="btn btn-outline-danger w-5"> View</a></div>
+                </div>
+    
+    
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 3 -->
+    <div class="modal fade" id="projectModal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content p-3">
+                <div class="d-flex">
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <img src="Certificates/Tutedute.jpg" alt="Tutedude" class="modal-img">
+                <h5 class="mt-3">Tutedude Web Development Hackathon</h5>
+                <p>
+                    Participated in and successfully completed Tutedude’s 48-hour online <strong>Web Development Hackathon</strong> held
+                    from
+                    <strong>July 25 to July 27, 2025</strong>. This intensive event focused on solving real-world challenges through
+                    innovative web
+                    solutions, emphasizing creativity, collaboration, and technical problem-solving skills. The hackathon tested both
+                    speed and
+                    precision in designing functional, scalable, and user-friendly web applications.
+                </p>
+                
+                <div class="row">
+                    <div class="col-1"><a href="lopemay.html" class="btn btn-outline-danger w-5"> View</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- footer -->
+<div class="footer container-fluid wow animate__animated animate__fadeIn animate__slow ">
+    <footer>
+        <div class="row mt-4 ft ">
+            <div class="col-md-12  ">
+                <div class="row ftr">
+                    <div class="col-md-3  ">
+                        <div class="row">
+                            <div class="col-5">
+                                <h4 class="  bg-primary  px-1 ms-2  rounded-pill text-white ">Satyam
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="text-white fp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                    elit tellus, luctus nec ullamcorper mattis, pulvinar
+                                    dapibus
+                                    leo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick link -->
+
+                    <div class="col-md-2  ">
+                        <div class=" d-flex">
+
+                            <div class="fotlink">
+                                <h6 class="fh">Quick Links</h6>
+                                <ul class="fl p-0">
+                                    <li><a href="#"><i class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Home</a>
+                                    </li>
+                                    <li><a href="#about"><i
+                                                class="fa-solid fa-arrow-up-right-from-square mx-1"></i>About</a>
+                                    </li>
+                                    <li><a href="service.html"><i
+                                                class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Service</a>
+                                    </li>
+                                    <li><a href="project.html"><i
+                                                class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Project</a>
+                                    </li>
+                                    <li><a href="contact.html"><i
+                                                class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contactfor mobile -->
+
+                    <div class="col-md-6 mobfooter ms-2">
+                        <div class=" ">
+
+                            <div class="contact ">
+                                <h6 class="text-white ms-2">Contact</h6>
+                                <p><i class="fa-solid fa-phone-volume mx-2 text-secondary"></i>+91-9616801911
+                                </p>
+                                <p> <i class="fa-solid fa-at mx-2 text-primary"></i>satyamtripathipm@gmail.com
+                                </p>
+                                <p><i class="fa-solid fa-location-dot mx-2 text-danger"></i>Varanasi,
+                                    Uttar
+                                    Pradesh BHARAT</p>
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="row ">
+                            <div class="col-md-12 dftext ms-2">
+                                <h6 class="text-white">Get the latest information</h6>
+                                <p class="text-white ">Reach out!</p>
+                            </div>
+                        </div>
+                        <div class="row social  ">
+                            <div class="col-1"><a href="" class="insta"><i class="fa-brands fa-instagram "></i></a>
+                            </div>
+                            <div class="col-1"><a href="" class="linked"><i class="fa-brands fa-linkedin lid"></i></a>
+                            </div>
+                            <div class="col-1"><a href="" class="fb"><i class="fa-brands fa-square-facebook fb"></i></a>
+                            </div>
+                            <div class="col-1"><a href="" class="twit"><i class="fa-brands fa-x-twitter tt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Contact for Large Screen -->
+
+                    <div class="col-md-4 largefooter">
+                        <div class=" ">
+
+                            <div class="contact ">
+                                <h6 class="text-white ms-2">Contact</h6>
+                                <p><i class="fa-solid fa-phone-volume mx-2 text-secondary"></i>+91-9616801911
+                                </p>
+                                <p> <i class="fa-solid fa-at mx-2 text-primary"></i>satyamtripathipm@gmail.com
+                                </p>
+                                <p><i class="fa-solid fa-location-dot mx-2 text-danger"></i>Varanasi,
+                                    Uttar
+                                    Pradesh BHARAT</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3  largefooter">
+                        <div class="row  socil">
+                            <div class="col-12 ftext">
+                                <h6 class="text-white">Get the latest information</h6>
+                                <p class="text-white">Reach out!</p>
+                            </div>
+                        </div>
+                        <div class="row social  ">
+                            <div class="col-2"><a href="" class="insta"><i class="fa-brands fa-instagram "></i></a>
+                            </div>
+                            <div class="col-2"><a href="" class="linked"><i class="fa-brands fa-linkedin lid"></i></a>
+                            </div>
+                            <div class="col-2"><a href="" class="fb"><i class="fa-brands fa-square-facebook fb"></i></a>
+                            </div>
+                            <div class="col-2"><a href="" class="twit"><i class="fa-brands fa-x-twitter tt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="text-white mx-0  mb-2">
+
+        <div class="row ">
+            <div class="col-md-12">
+                <div class="row p-2">
+                    <div class="col-md-5 copy ">
+                        <span class="text-white">Copyright © 2025 Royd. All Rights Reserved.</span>
+                    </div>
+                    <div class="col-md-5 ms-auto imp">
+                        <a href="privacy.html" class="me-4"> <i class="fa-solid fa-square-arrow-up-right"></i>Privacy
+                            Policy</a>
+                        <a href="terms.html"> <i class="fa-solid fa-square-arrow-up-right"></i>Terms &
+                            Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    <title> Satyam - Web Projects </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <style>
+        body {
+            background: radial-gradient(rgb(20, 5, 44), rgb(0, 0, 15));
+        }
+
+
+        .header-image {
+            position: relative;
+            top: -3rem;
+            background: url("") center/cover no-repeat;
+        }
+
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.575);
+        }
+
+        .header-content {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            color: white;
+            z-index: 2;
+        }
+
+        .view-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        /* Gal */
+        .gallery-img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+
+        /*  GitHub */
+        .github-icon {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: #333;
+            background: white;
+            border-radius: 50%;
+            padding: 3px 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: 0.3s ease, color 0.3s ease;
+        }
+
+        .github-icon:hover {
+            background: #333;
+            color: white;
+        }
+
+        footer{
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- GitHub Ic -->
+    <a href="https://github.com/satyam1978/Street-Supplier" target="_blank" class="github-icon">
+        <i class="bi bi-github"></i>
+    </a>
+
+    <!-- slidr sec -->
+    <header class="header-image">
+        <div id="slider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-indicators">
+                
+                <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="lopemay.PNG" width="100%" height="450">
+
+
+                </div>
+
+                <div class="carousel-item">
+                    <img src="lopemay4.png" alt="" width="100%" height="450">
+
+                </div>
+
+                <div class="carousel-item">
+                    <img src="lopemay2.png" alt="" width="100%" height="450">
+                </div>
+            </div>
+            <a href="#slider" class="carousel-control-prev" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a href="#slider" class="carousel-control-next" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+        
+        <div class="header-overlay"></div>
+
+
+
+        <div class="view-btn">
+            <a href="https://lopemay.netlify.app/" target="_blank" class="btn btn-danger btn-md">View Live</a>
+        </div>
+        <div class="header-content">
+            <h3 class="hcd">StreetSupply – Smart Ingredient Sourcing for Food Vendors</h3>
+            <p class="hcp">Built in just 48 hours during the Tutedude Hackathon by Team SAGA.</p>
+        </div>
+    </header>
+
+    <!-- Ab Sec-->
+    <h3 class=" border py-1 px-2 ms-2 me-2  mb-0 rounded-pill text-primary border-0 sat"><a href="index.html"
+            class="nav-link"><i class="fa-solid fa-house"></i></a>
+    </h3>
+    <section class="container py-3">
+                
+        <h2 class="text-white mb-4">
+            About the <span class="text-info">Project</span>
+        </h2>
+        <span class="text-white">
+            <h2>StreetSupply – Smart Ingredient Sourcing for Food Vendors</h2>
+
+            <p>
+                <strong>StreetSupply</strong> is a web-based platform designed to revolutionize how local food vendors
+                source
+                fresh ingredients.
+                The platform offers an efficient, transparent, and cost-effective solution by allowing vendors to:
+            </p>
+            <ul>
+                <li>Compare prices instantly from multiple suppliers</li>
+                <li>Locate nearby vendors for faster deliveries</li>
+                <li>Verify product quality through ratings and reviews</li>
+            </ul>
+
+            <p>
+                This project was developed in just <strong>48 hours</strong> during the
+                <strong>Tutedude Hackathon</strong> (25th – 27th July) by our team <strong>SAGA</strong>.
+            </p>
+
+            <h3>Team Members</h3>
+            <ul>
+                <li><strong>Gaurav Kumar Maurya</strong> – Backend Development & Database Design</li>
+                <li><strong>Kritika Chaubey</strong> – UI/UX Design & Content Strategy</li>
+                <li><strong>Satyam Sharma</strong> – Frontend Development & Integration</li>
+                <li><strong>Divya Singh</strong> – Research & Vendor Network Strategy</li>
+                <li><strong>Satyam Tripathi</strong> – Full Stack Development, Feature Planning & Deployment</li>
+            </ul>
+
+            <h3>Our Process</h3>
+
+            <h4>1. Ideation & Research</h4>
+            <p>
+                We identified challenges faced by local food vendors — high sourcing time, fluctuating prices, and lack
+                of
+                verified suppliers.
+                Our solution focused on a <strong>simple, vendor-friendly interface</strong> with real-time price
+                comparisons.
+            </p>
+
+            <h4>2. UI/UX Design</h4>
+            <ul>
+                <li><strong>Tool Used:</strong> Figma</li>
+                <li>Created wireframes and high-fidelity prototypes</li>
+                <li>Designed a clean, modern, mobile-friendly interface</li>
+                <li>Prioritized accessibility with clear typography and high contrast</li>
+            </ul>
+
+            <h4>3. Development</h4>
+            <ul>
+                <li><strong>Code Editor:</strong> Visual Studio Code (VS Code)</li>
+                <li><strong>Technologies:</strong> HTML5, CSS3 (Flexbox, Grid, Animations), JavaScript (ES6),
+                    LocalStorage</li>
+                <li>Implemented smooth animations and transitions for a premium experience</li>
+            </ul>
+
+            <h4>4. Testing & Refinement</h4>
+            <ul>
+                <li>Cross-browser testing on Chrome, Edge, and Firefox</li>
+                <li>Responsive testing on multiple devices using Chrome DevTools</li>
+                <li>Performance optimizations for faster load times</li>
+            </ul>
+
+            <h3>Key Features</h3>
+            <ul>
+                <li>Glass-effect sticky navigation bar with scroll animation</li>
+                <li>Dynamic price comparison box updating in real time</li>
+                <li>Animated section reveals for better user engagement</li>
+                <li>Prototype vendor location mapping system</li>
+            </ul>
+
+            <h3>Outcome</h3>
+            <p>
+                In just two days, we delivered a functional prototype that received positive feedback from hackathon
+                judges for
+                its
+                <strong>clarity, usability, and problem-solving approach</strong>.
+                The project showcased our teamwork, adaptability, and ability to deliver under tight deadlines.
+            </p>
+        </span>
+
+    </section>
+
+    <!-- Projt Gal -->
+    <section class="container pb-5">
+        <h3 class="text-white">Project Screenshots</h3>
+        <div class="row g-4 mt-2">
+            <div class="col-md-4">
+                <img src="lopemay.PNG" alt="lopemay" class="gallery-img" />
+            </div>
+            <div class="col-md-4">
+                <img src="lopemay4.PNG" alt="lopemay3" class="gallery-img" />
+            </div>
+            <div class="col-md-4">
+                <img src="lopemay5.PNG" alt="Screenshot 3" class="gallery-img" />
+            </div>
+        </div>
+        <div class="row g-4 mt-2">
+            <div class="col-md-4">
+                <img src="lopemay6.PNG" alt="lopemay" class="gallery-img" />
+            </div>
+            <div class="col-md-4">
+                <img src="lopemay7.PNG" alt="lopemay3" class="gallery-img" />
+            </div>
+            <div class="col-md-4">
+                <img src="lopemay2.PNG" alt="Screenshot 3" class="gallery-img" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Source Code Section -->
+    <section class="container pb-1">
+        <h3 class="text-danger">Source Code</h3>
+        <ul class="nav nav-tabs mt-3" id="codeTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="html-tab" data-bs-toggle="tab" data-bs-target="#htmlCode"
+                    type="button" role="tab">
+                    HTML
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="css-tab" data-bs-toggle="tab" data-bs-target="#cssCode" type="button"
+                    role="tab">
+                    CSS
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="js-tab" data-bs-toggle="tab" data-bs-target="#jsCode" type="button"
+                    role="tab">
+                    JavaScript
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content mt-3 sc">
+
+            <div class="tab-pane fade show active text-success" id="htmlCode" role="tabpanel">
+                <pre><code class="language-css">&lt;body&gt;
+                    &lt;header id="header"&gt;
+    &lt;h2&gt;&lt;a href=""&gt;lopemay&lt;/a&gt;&lt;/h2&gt;
+ &lt;div class="nav"&gt;
+  &lt;nav&gt;
+    &lt;a href="" id="Home"&gt;Home&lt;/a&gt;
+    &lt;a href="about.html" id="About"&gt;About Us&lt;/a&gt;
+    &lt;a href="contact.html" id="Services"&gt;Contact&lt;/a&gt;
+    &lt;a href="help.html" id="Helps"&gt;Help&lt;/a&gt;
+
+    &lt;div class="dropdown"&gt;
+        &lt;button class="account-btn"&gt;Login&lt;/button&gt;
+        &lt;div class="dropdown-content"&gt;
+            &lt;a href="order.html"&gt;Admin&lt;/a&gt;
+            &lt;a href="supplierlogin.html"&gt;Supplier&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+ &lt;/div&gt;
+&lt;/header&gt;
+                
+                   
+                &lt;/body&gt;
+                </code></pre>
+
+            </div>
+            <div class="tab-pane fade text-warning " id="cssCode" role="tabpanel">
+
+                <pre><code class="language-css">
+body {
+  background-color: #e9fdfa;
+  color: #000;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.hero {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 10rem;
+}
+
+.hero-image {
+  background-image: url("1.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 85vh;
+  margin-top: -10rem;
+  position: relative;
+  z-index: -1;
+}
+</code></pre>
+            </div>
+            <div class="tab-pane fade text-white" id="jsCode" role="tabpanel">
+                <pre><code class="language-javascript">
+  
+   window.addEventListener("load", () => {
+     const title = document.querySelector(".how-title");
+      const steps = document.querySelectorAll(".step");
+    
+     setTimeout(() => {
+       title.classList.add("show");
+     }, 300);
+   
+     steps.forEach((step, index) => {
+       setTimeout(() => {
+          step.classList.add("show");
+        }, 800 + index * 500);
+     });
+   });
+  
+  const compareBox = document.getElementById("compareBox");
+   
+   const dataItems = [
+      "🧅 Onion - ₹24/kg - 2 km",
+     "🥔 Potato - ₹18/kg - 1.5 km",
+"🍅 Tomato - ₹26/kg - 2.2 km",
+       "🫑 Capsicum - ₹40/kg - 1.8 km",
+       "🧄 Garlic - ₹120/kg - 3.1 km"
+     ];
+      
+                </code></pre>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <div class="footer container-fluid wow animate__animated animate__fadeIn animate__slow ">
+        <footer>
+            <div class="row mt-4 ft ">
+                <div class="col-md-12  ">
+                    <div class="row ftr">
+                        <div class="col-md-3  ">
+                            <div class="row">
+                                <div class="col-5">
+                                    <h4 class="  bg-primary  px-1 ms-2  rounded-pill text-white ">Satyam
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="text-white fp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                        elit tellus, luctus nec ullamcorper mattis, pulvinar
+                                        dapibus
+                                        leo.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick link -->
+
+                        <div class="col-md-2  ">
+                            <div class=" d-flex">
+
+                                <div class="fotlink">
+                                    <h6 class="fh">Quick Links</h6>
+                                    <ul class="fl p-0">
+                                        <li><a href="#"><i
+                                                    class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Home</a>
+                                        </li>
+                                        <li><a href="#about"><i
+                                                    class="fa-solid fa-arrow-up-right-from-square mx-1"></i>About</a>
+                                        </li>
+                                        <li><a href="service.html"><i
+                                                    class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Service</a>
+                                        </li>
+                                        <li><a href="project.html"><i
+                                                    class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Project</a>
+                                        </li>
+                                        <li><a href="contact.html"><i
+                                                    class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contactfor mobile -->
+
+                        <div class="col-md-6 mobfooter ms-2">
+                            <div class=" ">
+
+                                <div class="contact ">
+                                    <h6 class="text-white ms-2">Contact</h6>
+                                    <p><i class="fa-solid fa-phone-volume mx-2 text-secondary"></i>+91-9616801911
+                                    </p>
+                                    <p> <i class="fa-solid fa-at mx-2 text-primary"></i>satyamtripathipm@gmail.com
+                                    </p>
+                                    <p><i class="fa-solid fa-location-dot mx-2 text-danger"></i>Varanasi,
+                                        Uttar
+                                        Pradesh BHARAT</p>
+
+
+                                </div>
+                            </div>
+
+
+                            <div class="row ">
+                                <div class="col-md-12 dftext ms-2">
+                                    <h6 class="text-white">Get the latest information</h6>
+                                    <p class="text-white ">Reach out!</p>
+                                </div>
+                            </div>
+                            <div class="row social  ">
+                                <div class="col-1"><a href="" class="insta"><i class="fa-brands fa-instagram "></i></a>
+                                </div>
+                                <div class="col-1"><a href="" class="linked"><i
+                                            class="fa-brands fa-linkedin lid"></i></a>
+                                </div>
+                                <div class="col-1"><a href="" class="fb"><i
+                                            class="fa-brands fa-square-facebook fb"></i></a>
+                                </div>
+                                <div class="col-1"><a href="" class="twit"><i class="fa-brands fa-x-twitter tt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Contact for Large Screen -->
+
+                        <div class="col-md-4 largefooter">
+                            <div class=" ">
+
+                                <div class="contact ">
+                                    <h6 class="text-white ms-2">Contact</h6>
+                                    <p><i class="fa-solid fa-phone-volume mx-2 text-secondary"></i>+91-9616801911
+                                    </p>
+                                    <p> <i class="fa-solid fa-at mx-2 text-primary"></i>satyamtripathipm@gmail.com
+                                    </p>
+                                    <p><i class="fa-solid fa-location-dot mx-2 text-danger"></i>Varanasi,
+                                        Uttar
+                                        Pradesh BHARAT</p>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3  largefooter">
+                            <div class="row  socil">
+                                <div class="col-12 ftext">
+                                    <h6 class="text-white">Get the latest information</h6>
+                                    <p class="text-white">Reach out!</p>
+                                </div>
+                            </div>
+                            <div class="row social  ">
+                                <div class="col-2"><a href="" class="insta"><i class="fa-brands fa-instagram "></i></a>
+                                </div>
+                                <div class="col-2"><a href="" class="linked"><i
+                                            class="fa-brands fa-linkedin lid"></i></a>
+                                </div>
+                                <div class="col-2"><a href="" class="fb"><i
+                                            class="fa-brands fa-square-facebook fb"></i></a>
+                                </div>
+                                <div class="col-2"><a href="" class="twit"><i class="fa-brands fa-x-twitter tt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="text-white mx-0  mb-2">
+
+            <div class="row ">
+                <div class="col-md-12">
+                    <div class="row p-2">
+                        <div class="col-md-5 copy ">
+                            <span class="text-white">Copyright © 2025 Royd. All Rights Reserved.</span>
+                        </div>
+                        <div class="col-md-5 ms-auto imp">
+                            <a href="privacy.html" class="me-4"> <i
+                                    class="fa-solid fa-square-arrow-up-right"></i>Privacy
+                                Policy</a>
+                            <a href="terms.html"> <i class="fa-solid fa-square-arrow-up-right"></i>Terms &
+                                Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

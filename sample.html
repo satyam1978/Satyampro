@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    /* Base footer styles */
+    .footer {
+    background: #111;
+    padding: 20px 10px;
+    overflow-x: hidden;
+    }
+    
+    .footer .fh, .footer h6, .footer p, .footer a {
+    color: white;
+    }
+    
+    .footer ul {
+    list-style: none;
+    }
+    
+    .footer a {
+    text-decoration: none;
+    }
+    
+    .footer .d-flex {
+    flex-wrap: wrap; /* allow wrapping on small screens */
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+    .footer .ftr {
+    flex-direction: column;
+    text-align: center;
+    }
+    .footer .fotlink,
+    .footer .contact {
+    width: 100%;
+    margin-bottom: 20px;
+    }
+    }
+    
+    @media (max-width: 425px) {
+    .footer .social {
+    justify-content: center;
+    gap: 15px;
+    }
+    .footer .social .col-2 {
+    flex: 0 0 auto;
+    width: auto;
+    }
+    }
+    
+    @media (max-width: 375px) {
+    .footer .fp {
+    font-size: 14px;
+    }
+    .footer h4 {
+    font-size: 18px;
+    }
+    }
+    
+    @media (max-width: 320px) {
+    .footer h4 {
+    font-size: 16px;
+    }
+    .footer .fh {
+    font-size: 14px;
+    }
+    .footer .fp {
+    font-size: 13px;
+    }
+    }
+
+</body>
+</html>

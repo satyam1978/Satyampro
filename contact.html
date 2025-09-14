@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Satyam - Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: radial-gradient(rgb(20, 5, 44), rgb(0, 0, 15));
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      box-shadow: none !important;
+    }
+
+    .form {
+      margin: 0 .4rem;
+    }
+
+    .contactform {
+      box-shadow: 0 0 5px 2px #727272;
+    }
+
+    .form-container {
+      max-width: 800px;
+      margin: 3rem auto;
+    }
+
+    .form-control:disabled {
+      background-color: #f8f9fa;
+    }
+
+    .footer {
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container mt-4  ">
+      <nav class="navbar navbar-expand-lg  ">
+        <div class="container-fluid ">
+          <div class="row">
+            <div class="col-12">
+              <h3 class=" border bg-primary py-1 px-2 ms-2 me-2  mb-0 rounded-pill text-white border-0"><a
+                  href="index.html" class="nav-link">Satyam</a>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="form  ">
+    <p id="msg" class="text-danger fw-bold"></p>
+    <div class="form-container bg-white p-4 rounded  contactform py-5">
+      <h2 class="text-center mb-4">Contact Us</h2>
+
+      <form id="contactForm" method="POST" action="save_form.php">
+
+        <input type="hidden" name="form-name" value="contact">
+
+        <!-- Name -->
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">First Name*</label>
+            <input type="text" name="firstName" class="form-control" placeholder="Enter your first name" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Surname</label>
+            <input type="text" name="surname" class="form-control" placeholder="Enter your surname">
+          </div>
+        </div>
+
+        <!-- Email & Phone with Country Code -->
+        <div class="row g-3 mt-2">
+          <div class="col-md-6">
+            <label class="form-label">Email*</label>
+            <input type="email" name="email" class="form-control" placeholder="example@email.com" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Phone Number*</label>
+            <div class="input-group">
+              <select class="form-select" name="countryCode" style="max-width: 110px;" required>
+                <option value="+91" selected>🇮🇳 +91</option>
+                <option value="+1">🇺🇸 +1</option>
+                <option value="+65">🇸🇬 +65</option>
+                <option value="+44">🇬🇧 +44</option>
+                <option value="+61">🇦🇺 +61</option>
+                <option value="+81">🇯🇵 +81</option>
+              </select>
+              <input type="tel" name="phone" class="form-control" placeholder="9876543210" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- Valid ID -->
+        <div class="mt-3">
+          <label class="form-label">Valid ID Type*</label>
+          <select class="form-select" id="idType" name="idType" required>
+            <option selected disabled>Choose...</option>
+            <option>Aadhaar Card</option>
+            <option>PAN Card</option>
+            <option>Passport</option>
+            <option>Driver's License</option>
+            <option>National ID (Other Country)</option>
+          </select>
+        </div>
+        <div class="mt-2">
+          <label class="form-label">ID Number*</label>
+          <input type="text" class="form-control" id="idNumber" name="idNumber" placeholder="Enter your ID number"
+            required>
+        </div>
+
+        <!-- Location -->
+        <div class="row g-3 mt-3">
+          <div class="col-md-4">
+            <label class="form-label">Country*</label>
+            <input type="text" name="country" class="form-control" placeholder="Enter country" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">State*</label>
+            <input type="text" name="state" class="form-control" placeholder="Enter state" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">City*</label>
+            <input type="text" name="city" class="form-control" placeholder="Enter city" required>
+          </div>
+        </div>
+
+        <div class="mt-2">
+          <label class="form-label">Landmark*</label>
+          <input type="text" name="landmark" class="form-control" placeholder="Nearby landmark (optional)">
+        </div>
+
+        <!-- Gender & DOB -->
+        <div class="row g-3 mt-3">
+          <div class="col-md-6">
+            <label class="form-label">Gender*</label>
+            <select class="form-select" name="gender" required>
+              <option selected disabled>Choose...</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Date of Birth*</label>
+            <input type="date" name="dob" class="form-control" required>
+          </div>
+        </div>
+
+        <!-- Business Info -->
+        <div class="mt-3">
+          <label class="form-label">Business Name*</label>
+          <input type="text" name="businessName" class="form-control" placeholder="Enter your business name">
+        </div>
+        <div class="mt-2">
+          <label class="form-label">Website*</label>
+          <input type="url" name="website" class="form-control" placeholder="https://yourwebsite.com">
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="mt-3">
+          <label class="form-label">Social Media Presence* <small>(At least one required)</small></label>
+
+          <div class="input-group mb-2">
+            <select class="form-select social-select" data-target="instaLink" name="socialInstagram">
+              <option value="">Select</option>
+              <option value="instagram">Instagram</option>
+            </select>
+            <input type="url" id="instaLink" name="instaUrl" class="form-control" placeholder="Instagram URL">
+          </div>
+
+          <div class="input-group mb-2">
+            <select class="form-select social-select" data-target="fbLink" name="socialFacebook">
+              <option value="">Select</option>
+              <option value="facebook">Facebook</option>
+            </select>
+            <input type="url" id="fbLink" name="fbUrl" class="form-control" placeholder="Facebook URL">
+          </div>
+
+          <div class="input-group mb-2">
+            <select class="form-select social-select" data-target="twitterLink" name="socialTwitter">
+              <option value="">Select</option>
+              <option value="twitter">Twitter/X</option>
+            </select>
+            <input type="url" id="twitterLink" name="twitterUrl" class="form-control" placeholder="Twitter/X URL">
+          </div>
+
+          <div class="input-group mb-2">
+            <select class="form-select social-select" data-target="linkedinLink" name="socialLinkedin">
+              <option value="">Select</option>
+              <option value="linkedin">LinkedIn</option>
+            </select>
+            <input type="url" id="linkedinLink" name="linkedinUrl" class="form-control" placeholder="LinkedIn URL">
+          </div>
+        </div>
+
+        <!-- Reason for Contact -->
+        <div class="mt-3">
+          <label class="form-label">Reason for Contact*</label>
+          <textarea class="form-control" name="reason" rows="3" placeholder="Write your reason here..."
+            required></textarea>
+        </div>
+
+        <!-- Terms -->
+        <div class="mb-1 form-check">
+          <input type="checkbox" class="form-check-input" name="terms" required>
+          <label class="form-check-label">
+            I agree to the
+            <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms & Conditions</a>
+          </label>
+        </div>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" name="privacy" required>
+          <label class="form-check-label">
+            I agree to the
+            <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a>
+          </label>
+        </div>
+
+        <!-- Submit -->
+        <div class="mt-4 text-center">
+          <button type="submit" class="btn btn-primary px-5 py-2">Submit</button>
+        </div>
+      </form>
+
+
+    </div>
+
+
+    <!-- Terms & Conditions Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="termsModalLabel">Terms & Conditions</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Effective Date:</strong> 12 August 2025</p>
+            <p>These Terms & Conditions (“Terms”) govern your use of our website, services, and any related
+              content. By accessing or
+              using our services, you agree to comply with these Terms. If you do not agree, you may not
+              use our services.</p>
+
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing this website or engaging our services, you confirm that you have read,
+              understood, and agree to these
+              Terms.</p>
+
+            <h2>2. Services Provided</h2>
+            <p>We offer web development, design, and related professional services. The exact scope,
+              pricing, and timeline will be
+              agreed upon before starting any project.</p>
+
+            <h2>3. User Responsibilities</h2>
+            <ul>
+              <li>You must provide accurate and complete information when contacting or hiring us.</li>
+              <li>You agree not to use our services for any illegal, harmful, or unethical purposes.</li>
+              <li>You are responsible for ensuring that any materials you provide do not infringe on
+                third-party rights.</li>
+            </ul>
+
+            <h2>4. Payments & Refunds</h2>
+            <ul>
+              <li>Payment terms will be outlined in the agreed proposal or invoice.</li>
+              <li>Refunds are only provided in cases where services have not commenced or as agreed in
+                writing.</li>
+            </ul>
+
+            <h2>5. Intellectual Property</h2>
+            <p>All designs, code, and deliverables created by us remain our property until full payment is
+              received. Upon full
+              payment, ownership is transferred to you unless otherwise stated in the agreement.</p>
+
+            <h2>6. Limitation of Liability</h2>
+            <p>We are not liable for any indirect, incidental, or consequential damages arising from the use
+              of our services or
+              website.</p>
+
+            <h2>7. Termination</h2>
+            <p>We reserve the right to terminate services if you breach these Terms or engage in conduct
+              harmful to our business or
+              reputation.</p>
+
+            <h2>8. External Links</h2>
+            <p>Our website may contain links to third-party websites. We are not responsible for their
+              content or privacy practices.
+            </p>
+
+            <h2>9. Changes to Terms</h2>
+            <p>We may update these Terms from time to time. Any changes will be posted on this page with the
+              updated effective date.
+            </p>
+
+            <h2>10. Governing Law</h2>
+            <p>These Terms are governed by the laws of India, without regard to its conflict of law
+              principles.</p>
+
+            <h2>11. Contact Information</h2>
+            <p>If you have any questions about these Terms, you can contact us at:</p>
+            <p><strong>Email:</strong> satyamtripathipm@gmail.com<br>
+              <strong>Phone:</strong> +91-9616801911<br>
+              <strong>Address:</strong> Varanasi Uttar Pradesh BHARAT
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Effective Date:</strong> 12 August 2025</p>
+            <p>This Privacy Policy explains how we collect, use, disclose, and protect your information when
+              you use
+              our
+              services, visit our website, or interact with us. By using our services, you agree to the
+              terms
+              outlined in
+              this policy.</p>
+
+            <h2>1. Information We Collect</h2>
+            <p>We may collect the following types of information:</p>
+            <ul>
+              <li><strong>Personal Information:</strong> Name, email address, phone number, address, date
+                of
+                birth, and
+                other identifiers you provide when contacting or hiring us.</li>
+              <li><strong>Business Information:</strong> Company name, website, industry, and other
+                relevant
+                details.</li>
+              <li><strong>Technical Information:</strong> IP address, browser type, device information,
+                and usage
+                data
+                collected automatically when you use our website.</li>
+              <li><strong>Social & Professional Links:</strong> LinkedIn, Instagram, Facebook, Twitter, or
+                other
+                links you
+                share with us.</li>
+            </ul>
+
+            <h2>2. How We Use Your Information</h2>
+            <p>We may use your information for the following purposes:</p>
+            <ul>
+              <li>To provide, operate, and maintain our services.</li>
+              <li>To communicate with you regarding inquiries, projects, and service updates.</li>
+              <li>To personalize user experience and improve our website.</li>
+              <li>To process payments and send invoices.</li>
+              <li>To comply with legal obligations and protect against fraud.</li>
+            </ul>
+
+            <h2>3. Sharing & Disclosure</h2>
+            <p>We do not sell or rent your personal information. We may share your data only in the
+              following cases:
+            </p>
+            <ul>
+              <li>With your consent.</li>
+              <li>With trusted service providers who assist us in operating our services.</li>
+              <li>When required by law, court order, or government authority.</li>
+              <li>To protect the safety, rights, or property of our business and users.</li>
+            </ul>
+
+            <h2>4. Data Security</h2>
+            <p>We implement reasonable security measures to protect your personal data from unauthorized
+              access,
+              alteration,
+              disclosure, or destruction. However, no method of transmission over the internet is 100%
+              secure.</p>
+
+            <h2>5. Data Retention</h2>
+            <p>We retain your information only for as long as necessary to fulfill the purposes for which it
+              was
+              collected
+              or as required by law.</p>
+
+            <h2>6. Your Rights</h2>
+            <p>Depending on your location, you may have the right to:</p>
+            <ul>
+              <li>Access, update, or delete your personal information.</li>
+              <li>Withdraw consent for processing your data.</li>
+              <li>Request a copy of the information we hold about you.</li>
+            </ul>
+
+            <h2>7. Third-Party Links</h2>
+            <p>Our website may contain links to third-party websites. We are not responsible for the privacy
+              practices of
+              such websites.</p>
+
+            <h2>8. Updates to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page
+              with the
+              updated
+              effective date.</p>
+
+            <h2>9. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy or our data practices, please contact us
+              at:</p>
+            <p><strong>Email:</strong> satyamtripathipm@gmail.com<br>
+              <strong>Phone:</strong> +91-9616801911<br>
+              <strong>Address:</strong> Varanasi Uttar Pradesh BHARAT
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="footer container-fluid ">
+    <footer class="">
+      <hr class="text-white mx-0  mb-2">
+
+      <div class="row ">
+        <div class="col-md-12">
+          <div class="row p-2">
+            <div class="col-md-5 copy ">
+              <span class="text-white">Copyright © 2025 Royd. All Rights Reserved.</span>
+            </div>
+            <div class="col-md-5 ms-auto imp">
+              <a href="privacy.html" class="me-4"> <i class="fa-solid fa-square-arrow-up-right"></i>Privacy
+                Policy</a>
+              <a href="terms.html"> <i class="fa-solid fa-square-arrow-up-right"></i>Terms &
+                Conditions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Enable ID field on selection
+    document.getElementById("idType").addEventListener("change", function () {
+      const idNumberField = document.getElementById("idNumber");
+      if (this.value && this.value !== "Choose...") {
+        idNumberField.disabled = false;
+      } else {
+        idNumberField.disabled = true;
+        idNumberField.value = "";
+      }
+    });
+
+    // Enable social media input on selection
+    document.querySelectorAll(".social-select").forEach(select => {
+      select.addEventListener("change", function () {
+        const targetId = this.getAttribute("data-target");
+        const targetInput = document.getElementById(targetId);
+        if (this.value) {
+          targetInput.disabled = false;
+          targetInput.focus();
+        } else {
+          targetInput.disabled = true;
+          targetInput.value = "";
+        }
+      });
+    });
+
+    // Check at least one social media before submit
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      const socialInputs = document.querySelectorAll(".social-select");
+      let hasOne = false;
+      socialInputs.forEach(sel => {
+        if (sel.value) hasOne = true;
+      });
+      if (!hasOne) {
+        e.preventDefault();
+        document.getElementById("msg").innerHTML = "Please select at least one social media and provide its URL*";
+      } else {
+        document.getElementById("msg").innerHTML = "";
+      }
+    });
+  </script>
+
+</body>
+
+</html>
